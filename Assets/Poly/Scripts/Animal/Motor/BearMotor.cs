@@ -31,8 +31,9 @@ public class BearMotor : AnimalMotor {
 				    playerHP.TakeDamage (30);
                  animator.SetTrigger ("Attack");
 				agent.ResetPath ();
-				yield return new WaitForSeconds (1f);
+				yield return new WaitForSeconds (0.5f);
 			}
+            animator.SetTrigger("Walk");
             chaseTime += Time.deltaTime;
             agent.ResetPath();
             agent.SetDestination(destination =  visibleTarget.position);
@@ -79,7 +80,6 @@ public class BearMotor : AnimalMotor {
                 //Debug.Log("Возвращение в погоню");
                 ChangeCondition(Condition.Alarm, "Safety", "Alarm");
             }
-
             yield return new WaitForSeconds(0.1f);
         }
         
