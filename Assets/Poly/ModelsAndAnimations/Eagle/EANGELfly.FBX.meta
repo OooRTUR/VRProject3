@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 827b8e1cf4b7cf34e9b7d313fc2ad004
+timeCreated: 1542877434
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bald_eagle003
+    100002: //RootNode
+    100004: "\u0446Hub001"
+    100006: "\u0446Hub002"
+    100008: "\u0446Hub003"
+    100010: "\u0446LArm1"
+    100012: "\u0446LArmCollarbone"
+    100014: "\u0446LArmPalm"
+    100016: "\u0446LLeg1"
+    100018: "\u0446LLegAnkle"
+    100020: "\u0446LLegDigit11"
+    100022: "\u0446LLegDigit12"
+    100024: "\u0446LLegDigit20"
+    100026: "\u0446LLegDigit21"
+    100028: "\u0446LLegPlatform"
+    100030: "\u0446RArm1"
+    100032: "\u0446RArmCollarbone"
+    100034: "\u0446RArmPalm"
+    100036: "\u0446RLeg1"
+    100038: "\u0446RLegAnkle"
+    100040: "\u0446RLegDigit11"
+    100042: "\u0446RLegDigit12"
+    100044: "\u0446RLegDigit20"
+    100046: "\u0446RLegDigit21"
+    100048: "\u0446RLegPlatform"
+    100050: "\u0446Spine"
+    100052: "\u0446Spine1"
+    100054: "\u0446Spine2"
+    100056: "\u0446Tail1"
+    100058: "\u0446Tail2"
+    100060: "\u0446Tail3"
+    400000: bald_eagle003
+    400002: //RootNode
+    400004: "\u0446Hub001"
+    400006: "\u0446Hub002"
+    400008: "\u0446Hub003"
+    400010: "\u0446LArm1"
+    400012: "\u0446LArmCollarbone"
+    400014: "\u0446LArmPalm"
+    400016: "\u0446LLeg1"
+    400018: "\u0446LLegAnkle"
+    400020: "\u0446LLegDigit11"
+    400022: "\u0446LLegDigit12"
+    400024: "\u0446LLegDigit20"
+    400026: "\u0446LLegDigit21"
+    400028: "\u0446LLegPlatform"
+    400030: "\u0446RArm1"
+    400032: "\u0446RArmCollarbone"
+    400034: "\u0446RArmPalm"
+    400036: "\u0446RLeg1"
+    400038: "\u0446RLegAnkle"
+    400040: "\u0446RLegDigit11"
+    400042: "\u0446RLegDigit12"
+    400044: "\u0446RLegDigit20"
+    400046: "\u0446RLegDigit21"
+    400048: "\u0446RLegPlatform"
+    400050: "\u0446Spine"
+    400052: "\u0446Spine1"
+    400054: "\u0446Spine2"
+    400056: "\u0446Tail1"
+    400058: "\u0446Tail2"
+    400060: "\u0446Tail3"
+    4300000: bald_eagle003
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: bald_eagle003
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: bald_eagle003
+        weight: 1
+      - path: "\u0446Hub001"
+        weight: 1
+      - path: "\u0446Hub001/\u0446LLeg1"
+        weight: 1
+      - path: "\u0446Hub001/\u0446LLeg1/\u0446LLegAnkle"
+        weight: 1
+      - path: "\u0446Hub001/\u0446LLeg1/\u0446LLegAnkle/\u0446LLegDigit11"
+        weight: 1
+      - path: "\u0446Hub001/\u0446LLeg1/\u0446LLegAnkle/\u0446LLegDigit11/\u0446LLegDigit12"
+        weight: 1
+      - path: "\u0446Hub001/\u0446LLeg1/\u0446LLegAnkle/\u0446LLegDigit21"
+        weight: 1
+      - path: "\u0446Hub001/\u0446LLeg1/\u0446LLegAnkle/\u0446LLegDigit21/\u0446LLegDigit20"
+        weight: 1
+      - path: "\u0446Hub001/\u0446RLeg1"
+        weight: 1
+      - path: "\u0446Hub001/\u0446RLeg1/\u0446RLegAnkle"
+        weight: 1
+      - path: "\u0446Hub001/\u0446RLeg1/\u0446RLegAnkle/\u0446RLegDigit11"
+        weight: 1
+      - path: "\u0446Hub001/\u0446RLeg1/\u0446RLegAnkle/\u0446RLegDigit11/\u0446RLegDigit12"
+        weight: 1
+      - path: "\u0446Hub001/\u0446RLeg1/\u0446RLegAnkle/\u0446RLegDigit21"
+        weight: 1
+      - path: "\u0446Hub001/\u0446RLeg1/\u0446RLegAnkle/\u0446RLegDigit21/\u0446RLegDigit20"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2/\u0446Hub002"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2/\u0446Hub002/\u0446LArmCollarbone"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2/\u0446Hub002/\u0446LArmCollarbone/\u0446LArm1"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2/\u0446Hub002/\u0446LArmCollarbone/\u0446LArm1/\u0446LArmPalm"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2/\u0446Hub002/\u0446RArmCollarbone"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2/\u0446Hub002/\u0446RArmCollarbone/\u0446RArm1"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2/\u0446Hub002/\u0446RArmCollarbone/\u0446RArm1/\u0446RArmPalm"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2/\u0446Hub002/\u0446Spine"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Spine1/\u0446Spine2/\u0446Hub002/\u0446Spine/\u0446Hub003"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Tail1"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Tail1/\u0446Tail2"
+        weight: 1
+      - path: "\u0446Hub001/\u0446Tail1/\u0446Tail2/\u0446Tail3"
+        weight: 1
+      - path: "\u0446LLegPlatform"
+        weight: 1
+      - path: "\u0446RLegPlatform"
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
