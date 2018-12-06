@@ -77,7 +77,7 @@ public class EagleMotor : AnimalMotor
         traectory.graphCorrection = 200.0f;
         traectory.CalcGraph(transform.position, destination = eaglePatrolPoint);
         Vector3 nextP = traectory.GetNextPoint();
-        transform.rotation = Vec3Mathf.GetDir(transform.position, destination);
+        transform.rotation = Vec3Mathf.GetDirXY(transform.position, destination);
         while (Vector3.Distance(transform.position, destination) > 1.0f)
         {
             transform.position = Vector3.MoveTowards(transform.position, nextP, 0.5f);
@@ -146,10 +146,10 @@ public class EagleMotor : AnimalMotor
         traectory.CalcGraph(transform.position, visibleTarget.position);
         destination = traectory.GetNextPoint();
         Debug.Log("Совершили атаку на игрока");
-        //transform.rotation = Vec3Mathf.GetDir(transform.position, visibleTarget.position);
+        transform.rotation = Vec3Mathf.GetDirXY(transform.position, visibleTarget.position);
         while (Vector3.Distance(transform.position, visibleTarget.position)>1.0f)
         {
-            //transform.rotation = Vec3Mathf.GetDirX(transform.position, visibleTarget.position);
+            transform.rotation = Vec3Mathf.GetDirXY(transform.position, visibleTarget.position);
             transform.position = Vector3.MoveTowards(transform.position, visibleTarget.position, 1.0f);
             float dist = Vec3Mathf.DistanceTo(transform.position, visibleTarget.position);
             Debug.Log(dist);
@@ -164,7 +164,7 @@ public class EagleMotor : AnimalMotor
         }
         traectory.graphCorrection = 0.0f;
         traectory.CalcGraph(transform.position, destination = eaglePatrolPos);
-       // transform.rotation = Vec3Mathf.GetDirX(transform.position, destination);
+        transform.rotation = Vec3Mathf.GetDirXY(transform.position, destination);
         while (Vector3.Distance(transform.position, destination) > 1.0f)
         {
             transform.position = Vector3.MoveTowards(transform.position, destination, 1.0f);

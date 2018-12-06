@@ -14,6 +14,7 @@ public class TestGetAngleFly : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        startRot.rotation = Vec3Mathf.GetDirX(startRot.position, endRot.position);
-	}
+        
+        startRot.rotation = Vec3Mathf.GetDirXY(startRot.position, endRot.position);
+    }
 }

@@ -74,7 +74,21 @@ public class Vec3Mathf
     static public Quaternion GetDirX(Vector3 start, Vector3 end)
     {
         float angle = GetAngleXY(start, end);
+        angle = (angle > 90.0f && angle < 270.0f) ? 180.0f - angle : angle;
+        Debug.Log(angle);
         return Quaternion.Euler(angle, 0, 0);
+    }
+    static public Quaternion GetDirXY(Vector3 start, Vector3 end)
+    {
+        float angle = Vec3Mathf.GetAngle1(start, end);
+        float angleX = GetAngleXY(start, end);
+        float angleZ = 0.0f;
+        if (angle > 90.0f && angle < 270.0f) {
+            angle = -(180.0f - angle);
+            angleZ = 180.0f;
+        }
+        Debug.Log(angle + " | " + angleX);
+        return Quaternion.Euler(angleX, -angle, angleZ);
     }
 
     static public Vector3 GetReverseDir(Vector3 start, Vector3 end, float length=1)
