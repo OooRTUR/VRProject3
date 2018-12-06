@@ -25,8 +25,7 @@ public class SetTrails : MonoBehaviour
     {
 
         path = new NavMeshPath();
-
-        NavMesh.CalculatePath(startTransform.position, endTransform.position, NavMesh.AllAreas, path);
+        NavMesh.CalculatePath(startTransform.position, endTransform.position, 1<<4, path);
         pathCorners = new Vector3[path.corners.Length];
         pathCorners = path.corners;
         if (debugMode)
@@ -50,6 +49,7 @@ public class SetTrails : MonoBehaviour
             Vector3 nullY1 = new Vector3(pathCorners[i].x, 0.0f + uplift, pathCorners[i].z);
             Vector3 nullY2 = new Vector3(pathCorners[i + 1].x, 0.0f + uplift, pathCorners[i + 1].z);
             placeByCurve.rar = rar;
+            placeByCurve.corr = corr;
             placeByCurve.Run(
                 nullY1,
                 nullY2);

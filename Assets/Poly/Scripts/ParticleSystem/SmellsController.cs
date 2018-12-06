@@ -30,7 +30,7 @@ public class SmellsController : MonoBehaviour {
     void GeneratePath()
     {
         path = new NavMeshPath();
-        NavMesh.CalculatePath(start.position, rabbit.position, NavMesh.AllAreas, path);
+        NavMesh.CalculatePath(start.position, rabbit.position, 1<<4, path);
         pathCorners = new Vector3[path.corners.Length];
         pathCorners = path.corners;
 
