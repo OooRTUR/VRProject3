@@ -6,12 +6,18 @@ using VRTK;
 public class Trap : MonoBehaviour {
 
     [SerializeField]Animator animator;
+    bool isCharged = true;
 
 
 	void OnTriggerEnter (Collider other) {
-        //SetPlayerUnmovable(other);
-        MakeAnimation();
-        MakeDamage();
+        Debug.Log("ДЕБАГ САМФИН ПЛЗ");
+        if (isCharged)
+        {
+            //SetPlayerUnmovable(other);
+            MakeAnimation();
+            MakeDamage();
+            isCharged = false;
+        }
 	}
 
     void SetPlayerUnmovable(Collider other)
@@ -32,6 +38,6 @@ public class Trap : MonoBehaviour {
     {
         PlayerHealth playerHP = FindObjectOfType<PlayerHealth>();
         if (playerHP != null)
-            playerHP.TakeDamage(70);
+            playerHP.TakeDamage(15);
     }
 }
