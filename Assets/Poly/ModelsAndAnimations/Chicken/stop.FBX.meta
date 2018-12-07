@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1d89f43b56a4f204d96eea52369df655
-timeCreated: 1543301151
+guid: 9cd4d738f1f3fd54fa227255dd02635f
+timeCreated: 1544177542
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -19,20 +19,18 @@ ModelImporter:
     100022: CATRigLLeg1
     100024: CATRigLLeg2
     100026: CATRigLLegAnkle
-    100028: CATRigLLegPlatform
-    100030: CATRigRLeg1
-    100032: CATRigRLeg2
-    100034: CATRigRLegAnkle
-    100036: CATRigRLegPlatform
-    100038: CATRigSpine2
-    100040: CATRigSpine2 1
-    100042: CATRigSpine3
-    100044: CATRigSpine3 1
-    100046: CATRigSpine4
-    100048: CATRigSpineCATRigSpine1
-    100050: CATRigSpineCATRigSpine1 1
-    100052: //RootNode
-    100054: Dummy001
+    100028: CATRigRLeg1
+    100030: CATRigRLeg2
+    100032: CATRigRLegAnkle
+    100034: CATRigSpine2
+    100036: CATRigSpine2 1
+    100038: CATRigSpine3
+    100040: CATRigSpine3 1
+    100042: CATRigSpine4
+    100044: CATRigSpineCATRigSpine1
+    100046: CATRigSpineCATRigSpine1 1
+    100048: Dummy001
+    100050: //RootNode
     400000: CATRigAnkleBone001
     400002: CATRigAnkleBone002
     400004: CATRigHub001
@@ -47,20 +45,18 @@ ModelImporter:
     400022: CATRigLLeg1
     400024: CATRigLLeg2
     400026: CATRigLLegAnkle
-    400028: CATRigLLegPlatform
-    400030: CATRigRLeg1
-    400032: CATRigRLeg2
-    400034: CATRigRLegAnkle
-    400036: CATRigRLegPlatform
-    400038: CATRigSpine2
-    400040: CATRigSpine2 1
-    400042: CATRigSpine3
-    400044: CATRigSpine3 1
-    400046: CATRigSpine4
-    400048: CATRigSpineCATRigSpine1
-    400050: CATRigSpineCATRigSpine1 1
-    400052: //RootNode
-    400054: Dummy001
+    400028: CATRigRLeg1
+    400030: CATRigRLeg2
+    400032: CATRigRLegAnkle
+    400034: CATRigSpine2
+    400036: CATRigSpine2 1
+    400038: CATRigSpine3
+    400040: CATRigSpine3 1
+    400042: CATRigSpine4
+    400044: CATRigSpineCATRigSpine1
+    400046: CATRigSpineCATRigSpine1 1
+    400048: Dummy001
+    400050: //RootNode
     7400000: Take 001
     9500000: //RootNode
   materials:
@@ -162,10 +158,6 @@ ModelImporter:
       - path: CATRigHub001/CATRigSpineCATRigSpine1 1/CATRigSpine2 1/CATRigSpine3 1
         weight: 1
       - path: CATRigHub001/CATRigSpineCATRigSpine1 1/CATRigSpine2 1/CATRigSpine3 1/CATRigHub003
-        weight: 1
-      - path: CATRigLLegPlatform
-        weight: 1
-      - path: CATRigRLegPlatform
         weight: 1
       maskType: 3
       maskSource: {instanceID: 0}

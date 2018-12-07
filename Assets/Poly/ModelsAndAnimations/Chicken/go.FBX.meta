@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9504a9fdc8397504b9d544f9ea4378b3
-timeCreated: 1543301151
+guid: 2290267b26492a84597936d4e40ecd57
+timeCreated: 1544177535
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -32,8 +32,8 @@ ModelImporter:
     100048: CATRigSpineCATRigSpine1
     100050: CATRigSpineCATRigSpine1 1
     100052: Character001
-    100054: //RootNode
-    100056: Dummy001
+    100054: Dummy001
+    100056: //RootNode
     100058: hen
     400000: CATRigAnkleBone001
     400002: CATRigAnkleBone002
@@ -62,8 +62,8 @@ ModelImporter:
     400048: CATRigSpineCATRigSpine1
     400050: CATRigSpineCATRigSpine1 1
     400052: Character001
-    400054: //RootNode
-    400056: Dummy001
+    400054: Dummy001
+    400056: //RootNode
     400058: hen
     4300000: hen
     7400000: Take 001
