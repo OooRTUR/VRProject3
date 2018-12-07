@@ -19,6 +19,8 @@ public class RotationCalculator : ScriptableObject
     float deltaY; //y diff between frontray & backray
     float alpha; //угол между верхней и нижней стороной трапеции, образуемыми линиями рейкаста 
 
+    int groundMask = 1 << 16;
+
     RaycastHit hitFront;
     RaycastHit hitBack;
 
@@ -33,9 +35,9 @@ public class RotationCalculator : ScriptableObject
         frontVec = new Vector3(centr.x + x, centr.y + y, centr.z + z);
         backVec = new Vector3(centr.x - x, centr.y - y, centr.z - z);
 
-        if (Physics.Raycast(frontVec, Vector3.down, out hitFront, 25.0f, 1 << 9))
+        if (Physics.Raycast(frontVec, Vector3.down, out hitFront, 25.0f, groundMask))
             frontRayVec = hitFront.distance * Vector3.down;
-        if (Physics.Raycast(backVec, Vector3.down, out hitBack, 25.0f, 1 << 9))
+        if (Physics.Raycast(backVec, Vector3.down, out hitBack, 25.0f, groundMask))
             backRayVec = hitBack.distance * Vector3.down;
 
         deltaY = frontRayVec.y - backRayVec.y;
@@ -61,9 +63,9 @@ public class RotationCalculator : ScriptableObject
         frontVecZ = new Vector3(centr.x + x, centr.y + y, centr.z + z);
         backVecZ = new Vector3(centr.x - x, centr.y - y, centr.z - z);
 
-        if (Physics.Raycast(frontVecZ, Vector3.down, out hitFront, 25.0f, 1 << 9))
+        if (Physics.Raycast(frontVecZ, Vector3.down, out hitFront, 25.0f, groundMask))
             frontRayVecZ = hitFront.distance * Vector3.down;
-        if (Physics.Raycast(backVecZ, Vector3.down, out hitBack, 25.0f, 1 << 9))
+        if (Physics.Raycast(backVecZ, Vector3.down, out hitBack, 25.0f, groundMask))
             backRayVecZ = hitBack.distance * Vector3.down;
 
         deltaY = frontRayVecZ.y - backRayVecZ.y;
