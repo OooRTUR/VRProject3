@@ -10,12 +10,6 @@ public class ChickenMotor : AnimalMotor
 	public string epTag;
 	ZonesManager escapePoint;
 
-
-	protected override void Awake ()
-	{
-		base.Awake ();
-        
-    }
     protected override void Start()
     {
         base.Start();

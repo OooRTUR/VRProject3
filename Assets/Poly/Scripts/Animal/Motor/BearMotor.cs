@@ -5,14 +5,6 @@ public class BearMotor : AnimalMotor {
 
     float attackDistance = 4.75f;
 
-	protected override void Awake ()
-	{
-		agent = GetComponent<NavMeshAgent>();
-		fow = GetComponent<FieldOfView>();
-		ai = GetComponent<AnimalAI>();
-		animator = GetComponent<Animator> ();
-	}
-
 	protected override void Update ()
 	{
 		 animator.SetFloat("Speed", agent.velocity.magnitude);

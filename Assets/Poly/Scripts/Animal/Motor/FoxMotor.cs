@@ -12,7 +12,7 @@ public class FoxMotor : AnimalMotor {
 	{
 		agent = GetComponent<NavMeshAgent>();
 		ai = GetComponent<AnimalAI>();
-		animator = GetComponentInChildren<Animator> ();
+		animator = GetComponent<Animator> ();
 	}
 
 	protected override void Start ()
