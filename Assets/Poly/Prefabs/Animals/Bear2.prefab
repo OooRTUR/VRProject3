@@ -124,7 +124,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4542558086368408}
-  - component: {fileID: 95169758426670036}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -161,6 +160,7 @@ GameObject:
   - component: {fileID: 195186500808939304}
   - component: {fileID: 114627335442170472}
   - component: {fileID: 114634578207440886}
+  - component: {fileID: 95781252369957632}
   m_Layer: 0
   m_Name: Bear2
   m_TagString: Untagged
@@ -988,17 +988,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.36, y: 0.413, z: 0.7}
   m_Center: {x: -0.035, y: 0.25, z: -0.12}
---- !u!95 &95169758426670036
+--- !u!95 &95781252369957632
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1231712869418420}
+  m_GameObject: {fileID: 1386950204467404}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ec99d4a76c97ee94cbb0008b359db123, type: 3}
   m_Controller: {fileID: 9100000, guid: 6689b15fd9872084f88c1dd8c3028b25, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0

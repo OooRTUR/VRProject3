@@ -115,7 +115,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.8097561
+        functionName: MoveDelay
+        data: 
+        objectReferenceParameter: {fileID: 1381570292006832, guid: a7d5b57b3459f3945bd104b20cbb6886,
+          type: 2}
+        floatParameter: 3
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1

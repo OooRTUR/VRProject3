@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 114076397574332498}
   - component: {fileID: 195597374543744532}
   - component: {fileID: 114617614185206518}
+  - component: {fileID: 95674168580574466}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -294,7 +295,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4485307722810902}
-  - component: {fileID: 95626540720658830}
   - component: {fileID: 65209663693824358}
   m_Layer: 0
   m_Name: Model
@@ -960,13 +960,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 7, z: 15}
   m_Center: {x: 0, y: 4, z: 1.3}
---- !u!95 &95626540720658830
+--- !u!95 &95674168580574466
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626622199499836}
+  m_GameObject: {fileID: 1271660664419378}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f59120d61d7d4124fb6a2701befe56de, type: 3}
   m_Controller: {fileID: 9100000, guid: 501e5485f13dc984e89f4df6e9eaa0a2, type: 2}
@@ -1020,9 +1020,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e39c6a4405d3549973356b403614ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMode: 1
   modelToRotate: {fileID: 4485307722810902}
+  debugMode: 1
   rectRad: 1.06
+  rectRadZ: 0
   yMod: 2
 --- !u!137 &137056081445869470
 SkinnedMeshRenderer:

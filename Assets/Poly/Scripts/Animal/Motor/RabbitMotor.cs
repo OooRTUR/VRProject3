@@ -21,7 +21,7 @@ public class RabbitMotor : AnimalMotor
         float randomSec = Random.Range(0.5f, 0.6f);
         //agent.ResetPath();
         agent.SetDestination(Vec3Mathf.GetReverseDir(transform.position, visibleTarget.position, 35));
-		while (true)
+        while (true)
         {
             time += Time.deltaTime;
             chaseTime += Time.deltaTime;

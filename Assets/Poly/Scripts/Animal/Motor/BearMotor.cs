@@ -10,7 +10,7 @@ public class BearMotor : AnimalMotor {
 		agent = GetComponent<NavMeshAgent>();
 		fow = GetComponent<FieldOfView>();
 		ai = GetComponent<AnimalAI>();
-		animator = GetComponentInChildren<Animator> ();
+		animator = GetComponent<Animator> ();
 	}
 
 	protected override void Update ()

@@ -95,6 +95,15 @@ public class AnimalMotor : MonoBehaviour
             Debug.DrawLine(destination, new Vector3(destination.x, destination.y + 50.0f, destination.z), Color.red);
         }
     }
+
+    public IEnumerator MoveDelay(float divide)
+    {
+        float speed = cond == Condition.Alarm ? runSpeed : walkSpeed;
+        float delay = divide / agent.velocity.magnitude;
+        agent.speed = 0;
+        yield return new WaitForSeconds(delay);
+        agent.speed = speed;
+    }
 }
 
 [Serializable]
