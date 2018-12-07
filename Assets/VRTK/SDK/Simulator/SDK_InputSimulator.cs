@@ -149,6 +149,7 @@ namespace VRTK
 
         private void Awake()
         {
+            Cursor.visible = false;
             VRTK_SDKManager.instance.AddBehaviourToToggleOnLoadedSetupChange(this);
 			c_controller = GetComponent<CharacterController>();
         }

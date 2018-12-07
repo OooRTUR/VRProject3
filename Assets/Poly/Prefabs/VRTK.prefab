@@ -458,7 +458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1309287047181452
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +720,8 @@ GameObject:
   - component: {fileID: 114085963084050376}
   - component: {fileID: 114614655273897434}
   - component: {fileID: 114985186307070218}
+  - component: {fileID: 114380046786603412}
+  - component: {fileID: 114219049474036228}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -1958,7 +1960,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1916672711533028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4819113508321116}
@@ -2146,7 +2148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1177388365274490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.3, z: 0}
+  m_LocalPosition: {x: -11.95, y: 8.68, z: 29.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4903325404015354}
@@ -3435,7 +3437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 100
-  lowHPImage: {fileID: 0}
+  lowHPImage: {fileID: 114371218523653284}
   health: 0
 --- !u!114 &114174402225034288
 MonoBehaviour:
@@ -3479,6 +3481,32 @@ MonoBehaviour:
   setups:
   - {fileID: 114534527449276646}
   - {fileID: 114331946558251908}
+--- !u!114 &114219049474036228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424037810123156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5367b3334ceb84458088c8e4f026f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FogVolumeResolution: 1920 X 1080
+  _BlendMode: 1
+  GenerateDepth: 1
+  _Downsample: 1
+  BilateralUpsampling: 0
+  ShowBilateralEdge: 0
+  USMode: 2
+  ThisCamera: {fileID: 20463254827419008}
+  _FogVolumeCamera: {fileID: 0}
+  upsampleDepthThreshold: 0.00187
+  HDR: 0
+  TAA: 0
+  _TAA: {fileID: 0}
+  DepthLayer2: 1
+  SceneBlur: 1
 --- !u!114 &114250533651083960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3538,7 +3566,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u0417\u0430\u0436\u043C\u0438 \u041B\u041A\u041C \u0447\u0442\u043E\u0431\u044B
+  m_Text: "\u0417\u0430\u0436\u043C\u0438\u0442\u0435 RT \u0447\u0442\u043E\u0431\u044B
     \u043F\u043E\u0439\u043C\u0430\u0442\u044C"
 --- !u!114 &114267381671188846
 MonoBehaviour:
@@ -3692,6 +3720,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114380046786603412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424037810123156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 83b543b5d54486643a4abcf7e27031b2, type: 2}
 --- !u!114 &114412536477569282
 MonoBehaviour:
   m_ObjectHideFlags: 1
