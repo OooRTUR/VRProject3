@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: d06bde31cb10fdc49947da0720523f37
-timeCreated: 1542368144
+guid: 3c65b30dd5b33894f9d286082d6656b2
+timeCreated: 1544174015
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: cadnav.com
+    100000: cadnav.com001
     100002: CATRigHub002
     100004: CATRigHub003
     100006: CATRigHub004
@@ -33,11 +33,8 @@ ModelImporter:
     100050: CATRigTail1
     100052: CATRigTail2
     100054: CATRigTail3
-    100056: CATRigTail4
-    100058: CATRigTail5
-    100060: CATRigTail6
-    100062: //RootNode
-    400000: cadnav.com
+    100056: //RootNode
+    400000: cadnav.com001
     400002: CATRigHub002
     400004: CATRigHub003
     400006: CATRigHub004
@@ -65,14 +62,11 @@ ModelImporter:
     400050: CATRigTail1
     400052: CATRigTail2
     400054: CATRigTail3
-    400056: CATRigTail4
-    400058: CATRigTail5
-    400060: CATRigTail6
-    400062: //RootNode
-    4300000: cadnav.com
+    400056: //RootNode
+    4300000: cadnav.com001
     7400000: Take 001
     9500000: //RootNode
-    13700000: cadnav.com
+    13700000: cadnav.com001
   materials:
     importMaterials: 1
     materialName: 0
@@ -123,7 +117,7 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: cadnav.com
+      - path: cadnav.com001
         weight: 1
       - path: CATRigHub002
         weight: 1
@@ -174,12 +168,6 @@ ModelImporter:
       - path: CATRigHub002/CATRigTail1/CATRigTail2
         weight: 1
       - path: CATRigHub002/CATRigTail1/CATRigTail2/CATRigTail3
-        weight: 1
-      - path: CATRigHub002/CATRigTail1/CATRigTail2/CATRigTail3/CATRigTail4
-        weight: 1
-      - path: CATRigHub002/CATRigTail1/CATRigTail2/CATRigTail3/CATRigTail4/CATRigTail5
-        weight: 1
-      - path: CATRigHub002/CATRigTail1/CATRigTail2/CATRigTail3/CATRigTail4/CATRigTail5/CATRigTail6
         weight: 1
       - path: CATRigLLegPlatform
         weight: 1
