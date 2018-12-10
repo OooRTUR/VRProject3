@@ -43,7 +43,7 @@ public class PlayerAudioController : MonoBehaviour {
         musicSource.volume = musicVolume;
         ambientSource.volume = ambientVolume;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             if(!legSource.isPlaying)
                 legSource.Play();
