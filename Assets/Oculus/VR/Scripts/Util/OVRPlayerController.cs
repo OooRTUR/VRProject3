@@ -206,6 +206,8 @@ public class OVRPlayerController : MonoBehaviour
 
 	void Update()
 	{
+        print (Controller.velocity.magnitude);
+
 		if (animator != null)
 			animator.SetFloat ("Speed", Controller.velocity.magnitude);
 

@@ -7,17 +7,20 @@ public class PlayerHealth : MonoBehaviour {
 
 	public float startHealth;
 	public Image lowHPImage;
+    Color hpColor;
 
 	[SerializeField]float health;
 
 	void Start () {
 		health = startHealth;
+        hpColor = lowHPImage.color;
 	}
 
 	void Update () {
-		lowHPImage.enabled = health < startHealth / 2 ? true : false;
+        hpColor.a = (100 - health) / 100;
+        lowHPImage.color = hpColor;
 		if(health < startHealth)
-			health += Time.deltaTime * 2;
+			health += Time.deltaTime * 3;
 	}
 
 	public void TakeDamage (float damage) {
