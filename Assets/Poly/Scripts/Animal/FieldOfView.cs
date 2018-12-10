@@ -43,7 +43,7 @@ public class FieldOfView : MonoBehaviour {
             CharacterController c_controller = targetsInView[i].GetComponent<CharacterController>();
             //VRTK.SDK_InputSimulator inputSimulator = targetsInView[i].GetComponent<VRTK.SDK_InputSimulator>();
             float dist = Vector3.Distance(transform.position, target.position);
-            if (Vector3.Angle(transform.forward, dir) < viewAngle / 2 || c_controller.velocity.magnitude > 7.3f)
+            if (Vector3.Angle(transform.forward, dir) < viewAngle / 2 || c_controller.velocity.magnitude > 10f)
             {
 				if ((Physics.Raycast(transform.position, dir, dist, obstacleMask) && checkObstacles) && visibleTargets.Contains(target)) // && !visibleTargets.Exists(trans => trans == target) - доп проверка на всякий
                     visibleTargets.Remove(target);

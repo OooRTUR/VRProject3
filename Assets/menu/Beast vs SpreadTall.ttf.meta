@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0a6e094e5f425264183e68a733976ced
+timeCreated: 1544181293
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Beast vs SpreadTall
+  fontNames:
+  - Beast vs SpreadTall
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
