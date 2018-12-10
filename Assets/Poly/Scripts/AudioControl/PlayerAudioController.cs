@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerAudioController : MonoBehaviour {
 
+    [SerializeField] [Range(0.0f,1.0f)] float musicVolume;
+    [SerializeField] [Range(0.0f,1.0f)] float ambientVolume;
+
     [SerializeField] FieldOfViewAudio fow;
 
     [SerializeField] AudioSource legSource;
@@ -37,6 +40,8 @@ public class PlayerAudioController : MonoBehaviour {
 
     float dangerTime;
 	void Update () {
+        musicSource.volume = musicVolume;
+        ambientSource.volume = ambientVolume;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -56,6 +61,7 @@ public class PlayerAudioController : MonoBehaviour {
 
     IEnumerator SwitchMusic()
     {
+        musicVolume = 0.22f;
         yield return new WaitForSeconds(4.0f); // одиночное ожидание на старте игры
         while (true)
         {
@@ -79,6 +85,7 @@ public class PlayerAudioController : MonoBehaviour {
     }
     IEnumerator SwitchDanger()
     {
+        musicVolume = 1.0f;
         dangerIndex = -1;
         while (true)
         {
