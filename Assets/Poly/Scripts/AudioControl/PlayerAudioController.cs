@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerAudioController : MonoBehaviour {
 
+    [SerializeField] FieldOfViewAudio fow;
+
     [SerializeField] AudioSource legSource;
     [SerializeField] AudioSource breathSource;
     [SerializeField] AudioSource ambientSource;
@@ -13,24 +15,28 @@ public class PlayerAudioController : MonoBehaviour {
     [SerializeField] AudioClip breathClip;
     [SerializeField] AudioClip[] musicClips;
     [SerializeField] AudioClip[] blizzardClips;
+    [SerializeField] AudioClip[] dangerClips;
 
-    
-	// Use this for initialization
-	void Start () {
+    [SerializeField] public bool isDanger = false;
+
+    int musicIndex = -1;
+    int blizzardIndex = -1;
+    int dangerIndex = -1;
+
+    int dangerSignalsCount = 0;
+
+    // Use this for initialization
+    void Start () {
         legSource.clip = runClip;
         breathSource.clip = breathClip;
         ambientSource.clip = blizzardClips[0];
         musicSource.clip = musicClips[0];
+        StartCoroutine("SwitchMusic");
+        StartCoroutine("SwitchAmbient");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (!ambientSource.isPlaying)
-            ambientSource.Play();
-        if (!musicSource.isPlaying)
-            musicSource.Play();
 
-        SwitchClips();
+    float dangerTime;
+	void Update () {
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -48,28 +54,106 @@ public class PlayerAudioController : MonoBehaviour {
         }
     }
 
-    int musicIndex = 0;
-    void SwitchClips()
+    IEnumerator SwitchMusic()
     {
-        if(musicSource.time >= musicSource.clip.length-0.5f)
+        yield return new WaitForSeconds(4.0f); // одиночное ожидание на старте игры
+        while (true)
         {
-            musicIndex++;
-            if (musicIndex >= musicClips.Length)
-                musicIndex = 0;
-            musicSource.clip = musicClips[musicIndex];
+            Debug.Log("Смена пластинки");
+            SwitchMusicClips();
+            while (musicSource.isPlaying)
+            {
+                if (fow.isDanger)
+                    break;
+                yield return new WaitForSeconds(1.0f); //проверка каждую секунду
+            }
+            if (fow.isDanger)
+                break;
+           
+            yield return new WaitForSeconds(10.0f); // пауза между клипами
+        }
+        Debug.Log("Угроза");
+        StopCoroutine("SwitchMusic");
+        StartCoroutine("SwitchDanger");
+
+    }
+    IEnumerator SwitchDanger()
+    {
+        dangerIndex = -1;
+        while (true)
+        {
+            Debug.Log("Пластинка угрозы");
+            SwitchDangerClips();
+            while(musicSource.isPlaying)
+            {
+                if (!fow.isDanger)
+                    break;
+                yield return new WaitForSeconds(0.1f);
+            }
+            if (!fow.isDanger)
+                break;
+            yield return null;
+        }
+        Debug.Log("нет угрозы");
+        StopCoroutine("SwitchDanger");
+        StartCoroutine("SwitchMusic");
+    }
+    IEnumerator SwitchAmbient()
+    {
+        yield return new WaitForSeconds(2.0f);
+        while (true)
+        {
+            Debug.Log("Смена эмбиента");
+            SwitchAmbientClips();
+            while (ambientSource.isPlaying)
+            {
+                yield return new WaitForSeconds(1.0f);
+            }
+            yield return null;
         }
     }
+    IEnumerator DangerTimer()
+    {
+        dangerTime = 0.0f;
+        while (true)
+        {
+            dangerTime += 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    void SendDangerSignal()
+    {
+        dangerSignalsCount++;
+    }
+
+    
+    void SwitchMusicClips()
+    {
+        musicIndex++;
+        if (musicIndex >= musicClips.Length)
+            musicIndex = 0;
+        musicSource.clip = musicClips[musicIndex];
+        musicSource.Play();
+    }
+
+    
+    void SwitchAmbientClips()
+    {
+        blizzardIndex++;
+        if (blizzardIndex >= blizzardClips.Length)
+            blizzardIndex = 0;
+        ambientSource.clip = blizzardClips[blizzardIndex];
+        ambientSource.Play();
+    }
+
+    
+    void SwitchDangerClips()
+    {
+        dangerIndex++;
+        if (dangerIndex >= dangerClips.Length)
+            dangerIndex = 0;
+        musicSource.clip = dangerClips[dangerIndex];
+        musicSource.Play();
+    }
 }
-//[System.Serializable]
-//public struct MusicClips
-//{
-//    public AudioClip score;
-//    public AudioClip score1;
-//    public AudioClip score2;
-//}
-//[System.Serializable]
-//public struct AmbientClips
-//{
-//    public AudioClip softBlizzard;
-//    public AudioClip hardBlizzard;
-//}

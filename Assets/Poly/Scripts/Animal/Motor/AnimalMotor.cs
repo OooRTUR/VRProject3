@@ -48,6 +48,7 @@ public class AnimalMotor : MonoBehaviour
     // состояние безопасности, нормальная скорость перемещения
     protected virtual IEnumerator Secure()
     {
+        //FindObjectOfType<PlayerAudioController>().isDanger = false;
         float time = 0.0f;
         //Debug.Log("base Secure() started | this is base method from AnimalMotor");
         agent.speed = walkSpeed;
@@ -66,6 +67,7 @@ public class AnimalMotor : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         visibleTarget = fow.visibleTargets[0];
+        //FindObjectOfType<PlayerAudioController>().isDanger = true;
         ChangeCondition(Condition.Alarm, "Secure", "Alarm");
     }
 
