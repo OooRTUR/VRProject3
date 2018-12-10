@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 4854927697369704}
   - component: {fileID: 95141711120912182}
   - component: {fileID: 114214589843699084}
+  - component: {fileID: 114216511497203112}
   m_Layer: 8
   m_Name: FoxBody
   m_TagString: Untagged
@@ -755,7 +756,6 @@ GameObject:
   - component: {fileID: 114614655273897434}
   - component: {fileID: 114985186307070218}
   - component: {fileID: 114380046786603412}
-  - component: {fileID: 114219049474036228}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -3945,6 +3945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   catchTextTrans: {fileID: 224515923284795876}
   fillImage: {fileID: 114642651936829270}
+  rend: {fileID: 0}
 --- !u!114 &114166467411710074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4012,6 +4013,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc10256fb8da62541833c318887287a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicVolume: 0
+  ambientVolume: 0
+  fow: {fileID: 114216511497203112}
   legSource: {fileID: 82038271711794330}
   breathSource: {fileID: 82947845997783802}
   ambientSource: {fileID: 82375627722955186}
@@ -4025,32 +4029,27 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bfc2f270c137b314ba6d7cf92cbdd011, type: 3}
   blizzardClips:
   - {fileID: 8300000, guid: bee98184e62f7724e83cba0b24a6171e, type: 3}
---- !u!114 &114219049474036228
+  - {fileID: 8300000, guid: ce0e75eebcb981a438ad8bddf852d757, type: 3}
+  dangerClips:
+  - {fileID: 8300000, guid: 9189996f60f2b014eb80c7e7a6097a26, type: 3}
+  - {fileID: 8300000, guid: 95eab0aa8def023438d63378688c3439, type: 3}
+  isDanger: 0
+--- !u!114 &114216511497203112
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1424037810123156}
+  m_GameObject: {fileID: 1100078149058882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5367b3334ceb84458088c8e4f026f0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fbe2b50b9ed51e4a93d7c4ea165601e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FogVolumeResolution: 1920 X 1080
-  _BlendMode: 1
-  GenerateDepth: 1
-  _Downsample: 1
-  BilateralUpsampling: 0
-  ShowBilateralEdge: 0
-  USMode: 2
-  ThisCamera: {fileID: 20463254827419008}
-  _FogVolumeCamera: {fileID: 0}
-  upsampleDepthThreshold: 0.00187
-  HDR: 0
-  TAA: 0
-  _TAA: {fileID: 0}
-  DepthLayer2: 1
-  SceneBlur: 1
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 262144
+  viewRadius: 25
+  isDanger: 0
 --- !u!114 &114250533651083960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5046,7 +5045,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1424037810123156}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5367b3334ceb84458088c8e4f026f0e, type: 3}
   m_Name: 
