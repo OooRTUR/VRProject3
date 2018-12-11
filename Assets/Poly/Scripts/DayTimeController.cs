@@ -40,6 +40,7 @@ public class DayTimeController : MonoBehaviour {
             SetNight();
         }
     }
+
     public void SetMorning()
     {
         RenderSettings.skybox = morning;
