@@ -599,5 +599,10 @@ public class OVRPlayerController : MonoBehaviour
 			transform.rotation = Quaternion.Euler(euler);
 		}
 	}
+
+    public void SetMove(bool value)
+    {
+        canMove = value;
+    }
 }
 
