@@ -8,16 +8,16 @@ public class DayTimeController : MonoBehaviour {
     [SerializeField] Material afternoon;
     [SerializeField] Material evening;
     [SerializeField] Material night;
+    Material currentWeather;
 
-	// Use this for initialization
+	
 	void Start () {
-        
+        if (currentWeather != null)
+            RenderSettings.skybox = currentWeather;
+        else
+            RenderSettings.skybox = morning;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-
-    }
     void OnGUI()
     {
         if (GUI.Button(new Rect(10, 10, 150, 100), "morning"))
@@ -44,18 +44,22 @@ public class DayTimeController : MonoBehaviour {
     public void SetMorning()
     {
         RenderSettings.skybox = morning;
+        currentWeather = morning;
     }
     public void SetAfternoon()
     {
         RenderSettings.skybox = afternoon;
+        currentWeather = afternoon;
     }
     public void SetEvening()
     {
         RenderSettings.skybox = evening;
+        currentWeather = evening;
     }
     public void SetNight()
     {
         RenderSettings.skybox = night;
+        currentWeather = night;
     }
 
 }

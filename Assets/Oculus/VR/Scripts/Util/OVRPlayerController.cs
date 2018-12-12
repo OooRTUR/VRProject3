@@ -159,6 +159,7 @@ public class OVRPlayerController : MonoBehaviour
 
 	void Start()
 	{
+        canMove = !OnLoadManager.instance.mainMenuMode;
 		// Add eye-depth as a camera offset from the player controller
 		var p = CameraRig.transform.localPosition;
 		p.z = OVRManager.profile.eyeDepth;
