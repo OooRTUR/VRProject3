@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator Fading (float toFade)
     {
-        print("Fader activ!");
         Color alpha = fader.color;
         float difference = 1;
         alpha.a = toFade;
