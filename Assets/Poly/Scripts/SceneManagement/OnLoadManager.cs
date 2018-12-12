@@ -30,7 +30,7 @@ public class OnLoadManager : MonoBehaviour {
             mainMenuMode = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             SceneManager.LoadScene(0);
             mainMenuMode = true;
