@@ -20,10 +20,11 @@ public class CatchAnimal : MonoBehaviour {
 
     public void Catch (string tag) {
 		catchTimer += Time.deltaTime;
-		fillImage.fillAmount = catchTimer / 5;
+		fillImage.fillAmount = catchTimer / 2.5f;
 		if (fillImage.fillAmount == 1) {
 			ResetFill ();
             UpdateHunt(tag);
+            StartCoroutine("MoveCatchText");
             rend.enabled = false;
             col.enabled = false;
 		}
