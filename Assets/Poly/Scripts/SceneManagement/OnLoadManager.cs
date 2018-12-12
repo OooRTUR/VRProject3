@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TestDestroyer : MonoBehaviour {
+public class OnLoadManager : MonoBehaviour {
 
-    public static TestDestroyer instance;
+    public static OnLoadManager instance;
+
+    [SerializeField] public bool mainMenuMode = true;
 
     private void Awake()
     {
@@ -25,6 +27,15 @@ public class TestDestroyer : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(0);
+            mainMenuMode = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            SceneManager.LoadScene(0);
+            mainMenuMode = true;
         }
     }
+
+
 }
