@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1077300619003752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1261.7162, y: 8.090889, z: 1127.3241}
+  m_LocalPosition: {x: 1160.4319, y: 9.749725, z: 1146.0016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,8 +53,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.345093, y: 22.009903, z: 4.682007}
-  m_Center: {x: 0.81536865, y: 2.2747574, z: 1.4995728}
+  m_Size: {x: 16.371338, y: 22.009903, z: 15.861816}
+  m_Center: {x: 2.364502, y: 2.2747574, z: 2.781372}
 --- !u!114 &114454119803879226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,14 +124,14 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1934143837
+  randomSeed: -840176299
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4.5
+      scalar: 1.61
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -172,7 +172,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.56
+      scalar: 10.65
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -520,7 +520,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 1
-    maxNumParticles: 18
+    maxNumParticles: 56
     size3D: 0
     rotation3D: 0
     gravityModifier:
