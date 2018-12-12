@@ -68,7 +68,7 @@ public class CatchAnimal : MonoBehaviour {
                 GameMenu.instance.rabbits++;
                 break;
             case "Chicken":
-                GameMenu.instance.rabbits++;
+                GameMenu.instance.chickens++;
                 break;
         }
         GameMenu.instance.UpdateMenu();

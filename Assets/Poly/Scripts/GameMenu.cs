@@ -45,4 +45,9 @@ public class GameMenu : MonoBehaviour {
         rT.text = "Зайцы: " + rabbits.ToString();
         cT.text = "Куропатки: " + chickens.ToString();
     }
+
+    public void OnClickMainMenu()
+    {
+        OnLoadManager.instance.ReloadScene(true);
+    }
 }
