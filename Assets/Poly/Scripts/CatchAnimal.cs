@@ -18,12 +18,12 @@ public class CatchAnimal : MonoBehaviour {
         col = GetComponent<BoxCollider>();
     }
 
-    public void Catch () {
+    public void Catch (string tag) {
 		catchTimer += Time.deltaTime;
 		fillImage.fillAmount = catchTimer / 5;
 		if (fillImage.fillAmount == 1) {
 			ResetFill ();
-			StartCoroutine ("MoveCatchText");
+            UpdateHunt(tag);
             rend.enabled = false;
             col.enabled = false;
 		}
@@ -55,4 +55,21 @@ public class CatchAnimal : MonoBehaviour {
 		catchTextTrans.gameObject.SetActive (false);
         gameObject.SetActive(false);
 	}
+
+    void UpdateHunt (string tag)
+    {
+        switch(tag)
+        {
+            case "Mouse":
+                GameMenu.instance.mouses++;
+                break;
+            case "Rabbit":
+                GameMenu.instance.rabbits++;
+                break;
+            case "Chicken":
+                GameMenu.instance.rabbits++;
+                break;
+        }
+        GameMenu.instance.UpdateMenu();
+    }
 }

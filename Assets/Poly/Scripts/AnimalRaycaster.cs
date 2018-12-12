@@ -19,7 +19,7 @@ public class AnimalRaycaster : MonoBehaviour {
             {
                 animal = hit.collider.GetComponent<CatchAnimal>();
                 if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
-                    animal.Catch();
+                    animal.Catch(hit.collider.tag);
                 else
                     animal.ResetFill();
             }
