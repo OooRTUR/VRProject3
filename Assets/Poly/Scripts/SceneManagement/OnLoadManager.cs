@@ -36,7 +36,7 @@ public class OnLoadManager : MonoBehaviour {
             mainMenuMode = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             FadeController.instance.Fader(1);
             mainMenuMode = true;
