@@ -1,64 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DayTimeController : MonoBehaviour {
 
-    [SerializeField] Material morning;
-    [SerializeField] Material afternoon;
-    [SerializeField] Material evening;
-    [SerializeField] Material night;
+    [SerializeField] Material[] daytimes;
+    [SerializeField] Toggle[] dayTimeButtons;
 
-	
-	void Start () {
+    void Start () {
         if (OnLoadManager.instance.currentWeather != null)
             RenderSettings.skybox = OnLoadManager.instance.currentWeather;
         else
-            RenderSettings.skybox = morning;
-	}
+            RenderSettings.skybox = daytimes[0];
+
+        for (int i = 0; i < daytimes.Length; i++)
+        {
+            if (RenderSettings.skybox == daytimes[i])
+                dayTimeButtons[i].isOn = true;
+        }
+    }
 	
     void OnGUI()
     {
         if (GUI.Button(new Rect(10, 10, 150, 100), "morning"))
         {
-            SetMorning();
+            SetWeather(0);
         }
 
         if (GUI.Button(new Rect(10, 120, 150, 100), "afternoon"))
         {
-            SetAfternoon();
+            SetWeather(1);
         }
 
         if (GUI.Button(new Rect(10, 230, 150, 100), "evening"))
         {
-            SetEvening();
+            SetWeather(2);
         }
 
         if (GUI.Button(new Rect(10, 340, 150, 100), "night"))
         {
-            SetNight();
+            SetWeather(3);
         }
     }
 
-    public void SetMorning()
+    public void SetWeather (int weatherIndex)
     {
-        RenderSettings.skybox = morning;
-        OnLoadManager.instance.currentWeather = morning;
+        RenderSettings.skybox = daytimes[weatherIndex];
+        OnLoadManager.instance.currentWeather = daytimes[weatherIndex];
     }
-    public void SetAfternoon()
-    {
-        RenderSettings.skybox = afternoon;
-        OnLoadManager.instance.currentWeather = afternoon;
-    }
-    public void SetEvening()
-    {
-        RenderSettings.skybox = evening;
-        OnLoadManager.instance.currentWeather = evening;
-    }
-    public void SetNight()
-    {
-        RenderSettings.skybox = night;
-        OnLoadManager.instance.currentWeather = night;
-    }
-
 }
