@@ -8,12 +8,11 @@ public class DayTimeController : MonoBehaviour {
     [SerializeField] Material afternoon;
     [SerializeField] Material evening;
     [SerializeField] Material night;
-    Material currentWeather;
 
 	
 	void Start () {
-        if (currentWeather != null)
-            RenderSettings.skybox = currentWeather;
+        if (OnLoadManager.instance.currentWeather != null)
+            RenderSettings.skybox = OnLoadManager.instance.currentWeather;
         else
             RenderSettings.skybox = morning;
 	}
@@ -44,22 +43,22 @@ public class DayTimeController : MonoBehaviour {
     public void SetMorning()
     {
         RenderSettings.skybox = morning;
-        currentWeather = morning;
+        OnLoadManager.instance.currentWeather = morning;
     }
     public void SetAfternoon()
     {
         RenderSettings.skybox = afternoon;
-        currentWeather = afternoon;
+        OnLoadManager.instance.currentWeather = afternoon;
     }
     public void SetEvening()
     {
         RenderSettings.skybox = evening;
-        currentWeather = evening;
+        OnLoadManager.instance.currentWeather = evening;
     }
     public void SetNight()
     {
         RenderSettings.skybox = night;
-        currentWeather = night;
+        OnLoadManager.instance.currentWeather = night;
     }
 
 }

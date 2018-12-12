@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FadeController : MonoBehaviour {
+
+    public static FadeController instance;
 
     Image fader;
 
     private void Awake()
     {
+        instance = this;
         fader = GetComponent<Image>();
     }
 
@@ -19,7 +23,6 @@ public class FadeController : MonoBehaviour {
 
     public void Fader(float toFade)
     {
-        StopCoroutine("Fading");
         StartCoroutine(Fading(toFade));
     }
 
@@ -34,6 +37,7 @@ public class FadeController : MonoBehaviour {
             difference = Mathf.Abs(fader.color.a - alpha.a);
             yield return null;
         }
-        yield return new WaitForSeconds(1.5f);
+        if (toFade == 1)
+            SceneManager.LoadScene(0);
     }
 }

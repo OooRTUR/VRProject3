@@ -30,6 +30,6 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	void Die () {
-		Time.timeScale = 0;
+        OnLoadManager.instance.ReloadScene(false);
 	}
 }

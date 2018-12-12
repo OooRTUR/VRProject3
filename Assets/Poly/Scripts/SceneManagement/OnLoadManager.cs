@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class OnLoadManager : MonoBehaviour {
 
     public static OnLoadManager instance;
-
+    [HideInInspector]public Material currentWeather;
     [SerializeField] public bool mainMenuMode = true;
 
     private void Awake()
@@ -22,17 +22,23 @@ public class OnLoadManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
+    public void ReloadScene (bool value)
+    {
+        FadeController.instance.Fader(1);
+        mainMenuMode = value;
+    }
+
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(0);
+            FadeController.instance.Fader(1);
             mainMenuMode = false;
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            SceneManager.LoadScene(0);
+            FadeController.instance.Fader(1);
             mainMenuMode = true;
         }
     }
