@@ -14,6 +14,7 @@ public class DayTimeController : MonoBehaviour {
         else
             RenderSettings.skybox = daytimes[0];
 
+        if(dayTimeButtons!=null)
         for (int i = 0; i < daytimes.Length; i++)
         {
             if (RenderSettings.skybox == daytimes[i])

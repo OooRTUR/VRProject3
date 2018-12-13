@@ -110,6 +110,15 @@ public class EagleMotor : AnimalMotor
         //Debug.Log(angle);
         destination = Vec3Mathf.GetCirclePoint(eaglePatrolPos, angle, rad);
         agent.SetDestination(destination);
+        agent.speed = 60.0f;
+        Debug.Log("Перемещаемся к патрулю");
+        while(agent.remainingDistance > 6.0f)
+        {
+            yield return new WaitForSeconds(1.0f);
+        }
+
+        Debug.Log("Ожидание");
+
         while (true)
         {
             condTime += 0.01f;//Time.deltaTime;
@@ -129,10 +138,11 @@ public class EagleMotor : AnimalMotor
             //}
             if (fow.visibleTargets.Count == 0)
                 ChangeCondition(Condition.Safety, "Alarm", "Safety");
-            if (fow.visibleTargets.Count >0 && condTime >= 5.0f)
+            if (fow.visibleTargets.Count >0 && condTime >= 3.0f)
             {
                 ChangeCondition(Condition.Alarm, "Alarm", "MakeDive");
             }
+            agent.speed = runSpeed;
             Debug.DrawLine(eaglePatrolPos, agent.destination, Color.red);
             yield return new WaitForSeconds(0.01f);
         }

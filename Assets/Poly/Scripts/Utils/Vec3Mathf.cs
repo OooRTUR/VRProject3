@@ -42,6 +42,9 @@ public class Vec3Mathf
             angle = 360.0f - angle;
         return angle;
     }
+    /// <summary>
+    /// берет угол строго вдоль оси Y (независимо от положения в x и z). Хороший метод
+    /// </summary>
     static public float GetAngle1(Vector3 start, Vector3 end)
     {
         Vector3 targetDir = new Vector3(end.x-start.x, 0.0f, end.z-start.z);
@@ -63,6 +66,14 @@ public class Vec3Mathf
         Vector3 targetDir = new Vector3(0.0f, end.y - start.y, end.z - start.z);
         float angle = Vector3.Angle(targetDir, Vector3.forward);
         if (!(Vector3.Angle(Vector3.up, end - start) > 90f))
+            angle = 360.0f - angle;
+        return angle;
+    }
+    static public float GetAngleCanvas(Vector3 start, Vector3 end)
+    {
+        Vector3 targetDir = new Vector3(end.x - start.x, end.y - start.y, 0.0f);
+        float angle = Vector3.Angle(targetDir, Vector3.up);
+        if (!(Vector3.Angle(Vector3.right, end - start) > 90f))
             angle = 360.0f - angle;
         return angle;
     }
@@ -128,6 +139,16 @@ public class Vec3Mathf
         float z = Mathf.Sin((angle + 90.0f) * Mathf.Deg2Rad) * rad + vec3Zero.z;
 
         return new Vector3(x, vec3Zero.y, z);
+    }
+    /// <summary>
+    /// взять точку окружности в в плоскости XY
+    /// </summary>
+    static public Vector3 GetCirclePointXZ(Vector3 vec3Zero, float angle, float rad)
+    {
+        float x = Mathf.Cos((angle + 90.0f) * Mathf.Deg2Rad) * rad + vec3Zero.x;
+        float y = Mathf.Sin((angle + 90.0f) * Mathf.Deg2Rad) * rad + vec3Zero.y;
+
+        return new Vector3(x, y, vec3Zero.z);
     }
 
 }
