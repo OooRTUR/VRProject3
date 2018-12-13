@@ -6,6 +6,7 @@ public class TestPointer : MonoBehaviour {
     [SerializeField] Transform canvasCenter;
     [SerializeField] Transform player;
     [SerializeField] Transform target3d;
+    [SerializeField] float rad;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,7 @@ public class TestPointer : MonoBehaviour {
 	void Update () {
 
         float targetAngle = Vec3Mathf.GetAngle1(player.position, target3d.position) + Camera.main.transform.rotation.eulerAngles.y;
-        transform.localPosition = Vec3Mathf.GetCirclePointXZ(canvasCenter.localPosition, targetAngle, 540.0f);
+        transform.localPosition = Vec3Mathf.GetCirclePointXZ(canvasCenter.localPosition, targetAngle, rad);
 
         float selfAngle = Vec3Mathf.GetAngleCanvas(transform.localPosition, canvasCenter.localPosition);
         transform.localRotation = Quaternion.Euler(0.0f, 0.0f, selfAngle);
