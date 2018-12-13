@@ -64,7 +64,7 @@ public class AnimalAudioControllerShort : MonoBehaviour {
         if (index >= clips.Length)
             index = 0;
         source.clip = clips[index];
-        Debug.Log("Запуск клипа");
+        //Debug.Log("Запуск клипа");
         source.Play();
     }
 
@@ -76,7 +76,7 @@ public class AnimalAudioControllerShort : MonoBehaviour {
             if (dangerIndex >= dangerClips.Length)
                 dangerIndex = 0;
             source.clip = clips[dangerIndex];
-            Debug.Log("Запуск клипа угрозы");
+            //Debug.Log("Запуск клипа угрозы");
             source.Play();
         }
         else
