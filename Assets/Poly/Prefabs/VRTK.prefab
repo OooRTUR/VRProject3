@@ -1689,7 +1689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4135138350771776}
   m_Layer: 8
-  m_Name: MenyPoint
+  m_Name: MenuPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3517,7 +3517,7 @@ AudioSource:
   m_GameObject: {fileID: 1747211706701894}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243122343436979606, guid: 31a44f0f5a10acf41999f301af00de57,
+  OutputAudioMixerGroup: {fileID: 243380427227570310, guid: 31a44f0f5a10acf41999f301af00de57,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1

@@ -6,7 +6,7 @@ public class GameMenu : MonoBehaviour {
 
     public static GameMenu instance;
 
-    public int mouses, rabbits, chickens;
+    [HideInInspector]public int mouses, rabbits, chickens;
     public Text mT, rT, cT;
 
     public Transform menuPoint;

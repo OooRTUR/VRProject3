@@ -1118,6 +1118,7 @@ namespace VRTK
 
         protected virtual void Update()
         {
+
             VRTK_ControllerReference controllerReference = VRTK_ControllerReference.GetControllerReference(gameObject);
 
             //Only continue if the controller reference is valid
