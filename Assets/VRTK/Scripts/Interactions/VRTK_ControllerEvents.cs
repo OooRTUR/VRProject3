@@ -1118,7 +1118,6 @@ namespace VRTK
 
         protected virtual void Update()
         {
-
             VRTK_ControllerReference controllerReference = VRTK_ControllerReference.GetControllerReference(gameObject);
 
             //Only continue if the controller reference is valid
@@ -1131,7 +1130,18 @@ namespace VRTK
             Vector2 currentGripAxis = VRTK_SDK_Bridge.GetControllerAxis(SDK_BaseController.ButtonTypes.Grip, controllerReference);
             Vector2 currentTouchpadAxis = VRTK_SDK_Bridge.GetControllerAxis(SDK_BaseController.ButtonTypes.Touchpad, controllerReference);
 
-            //Trigger Touched
+            if (OVRInput.GetDown(OVRInput.Button.Two))
+            {
+                OnButtonTwoPressed(SetControllerEvent(ref buttonTwoPressed, true, 1f));
+                EmitAlias(ButtonAlias.ButtonTwoPress, true, 1f, ref buttonTwoPressed);
+            }
+            else if(OVRInput.GetUp(OVRInput.Button.Two))
+            {
+                OnButtonTwoReleased(SetControllerEvent(ref buttonTwoPressed, false, 0f));
+                EmitAlias(ButtonAlias.ButtonTwoPress, false, 0f, ref buttonTwoPressed);
+            }
+
+                //Trigger Touched
             if (VRTK_SDK_Bridge.GetControllerButtonState(SDK_BaseController.ButtonTypes.Trigger, SDK_BaseController.ButtonPressTypes.TouchDown, controllerReference))
             {
                 OnTriggerTouchStart(SetControllerEvent(ref triggerTouched, true, currentTriggerAxis.x));
