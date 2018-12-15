@@ -196,7 +196,7 @@ namespace VRTK
             CheckRayHit(rayHit, pointerCollidedWith);
 
             float actualLength = maximumLength;
-            if (rayHit && pointerCollidedWith.distance < maximumLength)
+            if (rayHit && pointerCollidedWith.distance < maximumLength && pointerCollidedWith.distance > 5)
             {
                 actualLength = pointerCollidedWith.distance;
             }

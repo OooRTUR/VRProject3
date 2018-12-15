@@ -18,6 +18,8 @@ TagManager:
   - FoxPoint
   - EagleFlyPoint
   - EaglePatrolPoint
+  - FoxG
+  - FoxM
   layers:
   - Default
   - TransparentFX

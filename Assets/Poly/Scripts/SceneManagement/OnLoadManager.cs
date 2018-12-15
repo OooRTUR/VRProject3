@@ -7,6 +7,7 @@ public class OnLoadManager : MonoBehaviour {
 
     public static OnLoadManager instance;
     [HideInInspector]public Material currentWeather;
+    [HideInInspector]public Material currentFox;
     [SerializeField] public bool mainMenuMode = true;
 
     private void Awake()

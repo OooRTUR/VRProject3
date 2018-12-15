@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 114267381671188846}
   - component: {fileID: 114166467411710074}
   - component: {fileID: 114251071595183646}
+  - component: {fileID: 114197837833693738}
   m_Layer: 8
   m_Name: OVRPlayerController
   m_TagString: Untagged
@@ -4011,6 +4012,22 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114197837833693738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177388365274490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992936b67871aa24699a734e89f55d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 5a065d83d3e74c34e8f331b4cc479cae, type: 2}
+  - {fileID: 2100000, guid: 7a7ad0bccfc367242b80f5c7598b39a7, type: 2}
+  - {fileID: 2100000, guid: 51678cb5fcb42c74a895feb4eb3403e2, type: 2}
+  rend: {fileID: 137006577635925316}
 --- !u!114 &114202530530468100
 MonoBehaviour:
   m_ObjectHideFlags: 1

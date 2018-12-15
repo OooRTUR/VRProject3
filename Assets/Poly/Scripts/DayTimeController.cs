@@ -50,4 +50,9 @@ public class DayTimeController : MonoBehaviour {
         RenderSettings.skybox = daytimes[weatherIndex];
         OnLoadManager.instance.currentWeather = daytimes[weatherIndex];
     }
+
+    public void Debuging ()
+    {
+        print("Touched!");
+    }
 }
