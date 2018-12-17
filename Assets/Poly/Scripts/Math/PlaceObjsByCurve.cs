@@ -69,26 +69,45 @@ public class PlaceObjsByCurve : ScriptableObject {
         rotCalc.maxAngleX = 60.0f;
         rotCalc.maxAngleZ = 45.0f;
         //Debug.Log("graph length: "+graphLength);
-        for (int i = 0; i < vec3points.Length; i++)
+        GameObject tempObj;
+        float rnd = 0.2f;
+        for (int i = 0; i < vec3points.Length-1; i++)
         {
             if (i % rar == 0)
             {
-                GameObject tempObj = Instantiate(obj, objsParent);
+                tempObj = Instantiate(obj, objsParent);
                 tempObj.transform.position = new Vector3(vec3points[i].x, vec3points[i].y+offset, vec3points[i].z);
                 tempObj.transform.parent = objsParent;
 
-                float rnd = 0.2f;
+                rnd = 0.2f;
                 tempObj.transform.rotation = new Quaternion(
                     tempObj.transform.rotation.x,
                     tempObj.transform.rotation.y + Random.Range(-rnd, rnd),
                     tempObj.transform.rotation.z,
                     tempObj.transform.rotation.w
                     );
+                tempObj.transform.rotation = Vec3Mathf.GetDir(vec3points[i], vec3points[0]);
                 rotCalc.MakeCalculations(tempObj.transform, tempObj.transform);
                 place.corr = corr;
                 place.Place(ref tempObj);
             }
         }
+
+        tempObj = Instantiate(obj, objsParent);
+        tempObj.transform.position = new Vector3(vec3points[vec3points.Length-1].x, vec3points[vec3points.Length - 1].y + offset, vec3points[vec3points.Length - 1].z);
+        tempObj.transform.parent = objsParent;
+
+        
+        tempObj.transform.rotation = new Quaternion(
+            tempObj.transform.rotation.x,
+            tempObj.transform.rotation.y + Random.Range(-rnd, rnd),
+            tempObj.transform.rotation.z,
+            tempObj.transform.rotation.w
+            );
+        //tempObj.transform.rotation = Vec3Mathf.GetDir(vec3points[vec3points.Length - 3], vec3points[vec3points.Length-2]);
+        rotCalc.MakeCalculations(tempObj.transform, tempObj.transform);
+        place.corr = corr;
+        place.Place(ref tempObj);
     }
 
     public void PlaceObjByGraph(GameObject obj1, GameObject obj2)
