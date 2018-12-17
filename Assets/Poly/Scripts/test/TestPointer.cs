@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TestPointer : MonoBehaviour {
     [SerializeField] Transform canvasCenter;
     [SerializeField] Transform player;
     [SerializeField] Transform target3d;
+    [SerializeField] FieldOfViewAudio fow;
+    [SerializeField] Image image;
     [SerializeField] float rad;
 
 	// Use this for initialization
@@ -15,6 +18,15 @@ public class TestPointer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(fow.isDanger)
+        {
+            image.enabled = true;
+        }
+        else
+        {
+            image.enabled = false;
+        }
 
         if (target3d != null)
         {
