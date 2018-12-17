@@ -22,7 +22,7 @@ public class DayTimeController : MonoBehaviour {
         }
     }
 	
-    void OnGUI()
+    /*void OnGUI()
     {
         if (GUI.Button(new Rect(10, 10, 150, 100), "morning"))
         {
@@ -43,7 +43,7 @@ public class DayTimeController : MonoBehaviour {
         {
             SetWeather(3);
         }
-    }
+    }*/
 
     public void SetWeather (int weatherIndex)
     {

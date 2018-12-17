@@ -4820,6 +4820,8 @@ MonoBehaviour:
   canvasCenter: {fileID: 224097082531871368}
   player: {fileID: 4698800285065120}
   target3d: {fileID: 0}
+  fow: {fileID: 114216511497203112}
+  image: {fileID: 114784120318245058}
   rad: 2.45
 --- !u!114 &114581414008663244
 MonoBehaviour:
@@ -5159,7 +5161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e933e81d3c20c74ea6fdc708a67e3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  queueAhead: 0
+  queueAhead: 1
   useRecommendedMSAALevel: 1
   _monoscopic: 0
   enableAdaptiveResolution: 0
@@ -5194,7 +5196,7 @@ MonoBehaviour:
   usePositionTracking: 0
   useRotationTracking: 1
   useIPDInPositionTracking: 1
-  resetTrackerOnLoad: 1
+  resetTrackerOnLoad: 0
   AllowRecenter: 1
   _reorientHMDOnControllerRecenter: 1
 --- !u!114 &114915923109354654
@@ -5747,7 +5749,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224841286020887688}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6157,8 +6159,8 @@ RectTransform:
   m_LocalScale: {x: 0.00285, y: 0.01, z: 1}
   m_Children:
   - {fileID: 224247568082202932}
-  - {fileID: 224014142876513584}
   - {fileID: 224911949351843888}
+  - {fileID: 224014142876513584}
   m_Father: {fileID: 4609086907612934}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6178,7 +6180,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224841286020887688}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

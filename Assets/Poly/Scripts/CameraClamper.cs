@@ -15,7 +15,7 @@ public class CameraClamper : MonoBehaviour {
 
     void Update()
     {
-        if ((cameraTrans.eulerAngles.x > 60 && cameraTrans.eulerAngles.x < 100) && OnLoadManager.instance.currentFox != null && !player.canMove)
+        if ((cameraTrans.eulerAngles.x > 60 && cameraTrans.eulerAngles.x < 100) && !player.canMove)
             StartGame();
         if (cameraTrans.eulerAngles.x > 68 && cameraTrans.eulerAngles.x < 100)
             UpdateFader(1);

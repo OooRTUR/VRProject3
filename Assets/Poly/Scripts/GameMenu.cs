@@ -8,8 +8,9 @@ public class GameMenu : MonoBehaviour {
 
     [HideInInspector]public int mouses, rabbits, chickens;
     public Text mT, rT, cT;
-
     public Transform menuPoint;
+
+    bool canActive = false;
     Canvas canvas;
     RectTransform rectTrans;
 
@@ -22,6 +23,8 @@ public class GameMenu : MonoBehaviour {
 
     private void Start()
     {
+        if (!OnLoadManager.instance.mainMenuMode)
+            SetCanActive(true);
         UpdateMenu();
     }
 
@@ -32,7 +35,7 @@ public class GameMenu : MonoBehaviour {
             if (distance > 20)
                 canvas.enabled = false;
         }
-        if(OVRInput.Get(OVRInput.Button.One)) {
+        if(OVRInput.Get(OVRInput.Button.One) && canActive) {
             rectTrans.position = menuPoint.position;
             rectTrans.rotation = Quaternion.LookRotation(menuPoint.forward);
             canvas.enabled = true;
@@ -44,6 +47,11 @@ public class GameMenu : MonoBehaviour {
         mT.text = "Мыши: " + mouses.ToString();
         rT.text = "Зайцы: " + rabbits.ToString();
         cT.text = "Куропатки: " + chickens.ToString();
+    }
+
+    public void SetCanActive (bool value)
+    {
+        canActive = value;
     }
 
     public void OnClickMainMenu()
