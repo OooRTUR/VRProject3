@@ -5,6 +5,7 @@ using UnityEngine;
 public class SmellController : MonoBehaviour {
 	public Transform rabbit;
 	ParticleSystem ps;
+    ParticleRenderer pr;
     bool isTriggered = false;
 
     public delegate void MethodHandler(GameObject obj);
@@ -12,16 +13,20 @@ public class SmellController : MonoBehaviour {
 
 	void Awake () {
 		ps = GetComponent<ParticleSystem>();
+        pr = GetComponent<ParticleRenderer>();
 	}
     void OnTriggerEnter(Collider other)
-    {
+    {/*
         if (ps.isPlaying && !isTriggered)
         {
             ps.Stop();
             Debug.Log("STOP SMELL");
-            OnEnter(gameObject);
-            isTriggered = true;
-        }
+            
+            
+        }*/
+        OnEnter(gameObject);
+        isTriggered = true;
+        pr.enabled = false;
     }
     IEnumerator ChangeRot()
     {
