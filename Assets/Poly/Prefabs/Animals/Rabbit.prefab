@@ -1161,6 +1161,9 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 2c7b5a576f31cf84d95d55c26bf82ec3, type: 3}
   - {fileID: 8300000, guid: 44d5f78e7b8dea24ea5a0cf63e447e89, type: 3}
+  dangerClips: []
+  delay: 4
+  isDanger: 0
 --- !u!114 &114574526011825878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1245,7 +1248,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6bfe69af0c4369144bde6e7fb8811fb9, type: 2}
+  - {fileID: 2100000, guid: 5e080ef7c27ca2144a33a4dbec9fe995, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -61,7 +61,6 @@ public class PlayerAudioController : MonoBehaviour {
 
     IEnumerator SwitchMusic()
     {
-        musicVolume = 0.22f;
         yield return new WaitForSeconds(4.0f); // одиночное ожидание на старте игры
         while (true)
         {
@@ -85,7 +84,6 @@ public class PlayerAudioController : MonoBehaviour {
     }
     IEnumerator SwitchDanger()
     {
-        musicVolume = 1.0f;
         dangerIndex = -1;
         while (true)
         {

@@ -68,11 +68,13 @@ public class AnimalAI : MonoBehaviour
 
 	public virtual void FindAreaCenter()
     {
-		foreach (Transform trans in SaveZones)
+        int randomZone = Random.Range(0, SaveZones.Length);
+        /*foreach (Transform trans in SaveZones)
         {
             if (areaCenter == null || Vec3Mathf.DistanceTo(transform.position, trans.position) < Vec3Mathf.DistanceTo(transform.position, areaCenter.position))
                 areaCenter = trans;
-        }
+        }*/
+        areaCenter = SaveZones[randomZone];
 		walkBounds.SetBounds (walkWidth, walkLength, areaCenter.position);
     }
 

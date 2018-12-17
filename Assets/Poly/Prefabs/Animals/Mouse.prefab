@@ -833,8 +833,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1967477372359660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1586.5033, y: 11.143596, z: 1695.8704}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 416.87344, y: 10.010377, z: 779.3178}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4869091483960400}
   - {fileID: 4395380572180366}
@@ -925,7 +925,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.43, z: 0}
+  m_Center: {x: 0, y: 0.58, z: 0}
 --- !u!82 &82049877568870806
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1070,6 +1070,9 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: ded92edb78f8f3742b72fb1277280640, type: 3}
   - {fileID: 8300000, guid: 16ce62ed91cfb614bb4399360326c2e0, type: 3}
+  dangerClips: []
+  delay: 4
+  isDanger: 0
 --- !u!114 &114221612103297472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1368,7 +1371,7 @@ RectTransform:
   m_GameObject: {fileID: 1840853503346812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 1}
+  m_LocalScale: {x: 0.002, y: 0.002, z: 1}
   m_Children:
   - {fileID: 224323538364234444}
   - {fileID: 224327080755123164}
@@ -1377,6 +1380,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.62}
+  m_AnchoredPosition: {x: 0, y: 2.15}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
