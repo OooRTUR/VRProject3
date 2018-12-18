@@ -45,6 +45,7 @@ public class FoxMotor : AnimalMotor {
 
 	protected override IEnumerator Alarm()
 	{
+        TestPointer.instance.target3d = this.transform;
 		if (!model.enabled) {
 			ai.FindAreaCenter (visibleTarget.position);
 			agent.Warp (ai.areaCenter.position);
@@ -64,6 +65,7 @@ public class FoxMotor : AnimalMotor {
 			yield return new WaitForSeconds(0.1f);
 		}
 		agent.ResetPath();
+        TestPointer.instance.target3d = null;
 		ChangeCondition(Condition.Safety, "Alarm", "Safety");
 	}
 

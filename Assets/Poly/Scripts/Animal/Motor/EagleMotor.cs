@@ -103,6 +103,7 @@ public class EagleMotor : AnimalMotor
     //=================================================================================================================================
     protected override IEnumerator Alarm()
     {
+        TestPointer.instance.target3d = transform;
         Debug.Log("Режим патрулирования");
         if (!agent.enabled) agent.enabled = true;
         float condTime = 0.0f;
@@ -137,7 +138,10 @@ public class EagleMotor : AnimalMotor
             //    ChangeCondition(Condition.Safety, "Alarm","Safety");
             //}
             if (fow.visibleTargets.Count == 0)
+            {
+                TestPointer.instance.target3d = null;
                 ChangeCondition(Condition.Safety, "Alarm", "Safety");
+            }
             if (fow.visibleTargets.Count >0 && condTime >= 3.0f)
             {
                 ChangeCondition(Condition.Alarm, "Alarm", "MakeDive");
@@ -189,6 +193,7 @@ public class EagleMotor : AnimalMotor
     float safetyWalkTime = 0.0f;
     protected override IEnumerator Safety()
     {
+        
         float condTime = 0.0f;
         agent.SetDestination(destination);
         while (true)

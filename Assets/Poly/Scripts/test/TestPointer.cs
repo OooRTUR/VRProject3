@@ -11,15 +11,26 @@ public class TestPointer : MonoBehaviour {
     [SerializeField] Image image;
     [SerializeField] float rad;
 
-	// Use this for initialization
-	void Start () {
+    public static TestPointer instance;
+
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(instance);
+    }
+
+    // Use this for initialization
+    void Start () {
         //StartCoroutine("ControlPointer");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        if(fow.isDanger)
+        if(fow.isDanger && target3d!=null)
         {
             image.enabled = true;
         }
