@@ -6,9 +6,11 @@ using UnityEngine.AI;
 public class SmellsController : MonoBehaviour {
 
     public SmellController[] smells;
+    public MouseLocationSound[] sounds;
     public Transform start;
     public Transform rabbit;
     public int index;
+    public int sIndex;
     public float rad;
     public float dim;
     public float rar;
@@ -16,18 +18,20 @@ public class SmellsController : MonoBehaviour {
     public Transform smellsParent;
     public float corr;
 
+
+
     PlaceObjsByCurve place;
     NavMeshPath path;
     Vector3[] pathCorners;
 	// Use this for initialization
 	public void Run () {
         
-        GeneratePath();
-        InitSmells();
-        StartCoroutine(DrawPath());
+        //GeneratePath();
+        //InitSmells();
+        //StartCoroutine(DrawPath());
 	}
 
-    void GeneratePath()
+    public void GeneratePath()
     {
         path = new NavMeshPath();
         NavMesh.CalculatePath(start.position, rabbit.position, 1<<4, path);
@@ -50,13 +54,14 @@ public class SmellsController : MonoBehaviour {
                 nullY2);
             place.objsParent = smellsParent;
             place.corr = corr;
+            //Debug.Log(pref.name);
             place.PlaceObjByGraph(pref);
         }
     }
 
 
 
-    void InitSmells()
+    public void InitSmells()
     {
         Debug.Log(transform.name);
         smells = new SmellController[smellsParent.childCount];
@@ -84,6 +89,35 @@ public class SmellsController : MonoBehaviour {
         smells[index + 1].gameObject.SetActive(true);
         smells[index + 2].gameObject.SetActive(true);
     }
+
+
+   public void InitMouseSounds()
+    {
+        //Debug.Log(transform.name);
+        sounds = new MouseLocationSound[smellsParent.childCount];
+        for (int i = 0; i < smellsParent.childCount; i++)
+        {
+            sounds[i] = smellsParent.GetChild(i).GetComponent<MouseLocationSound>();
+            sounds[i].rabbit = rabbit;
+        }
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            sounds[i].OnEnter += delegate (GameObject obj)
+            {
+                if (index < sounds.Length - 4)
+                {
+                    index++;
+                    sounds[index].gameObject.SetActive(true);
+                }
+            };
+            sounds[i].gameObject.SetActive(false);
+        }
+        sIndex = 0;
+        sounds[index].gameObject.SetActive(true);
+        sounds[index + 1].gameObject.SetActive(true);
+        sounds[index + 2].gameObject.SetActive(true);
+    }
+
     IEnumerator DrawPath()
     {
         while (true)

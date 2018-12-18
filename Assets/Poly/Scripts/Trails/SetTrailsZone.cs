@@ -5,7 +5,7 @@ using UnityEngine;
 public class SetTrailsZone : MonoBehaviour
 {
 
-    public enum TrailType { trail, smell };
+    public enum TrailType { trail, smell, sound };
 
     public float widthZone;
     public float lengthZone;
@@ -14,9 +14,11 @@ public class SetTrailsZone : MonoBehaviour
     public float corr;
     public GameObject setTrailsPrefab;
     public GameObject setSmellPrefab;
+    public GameObject setSoundPrefab;
 
     public GameObject trailPrefab;
     public GameObject smellPrefab;
+    public GameObject soundPrefab;
 
     Bounds bounds;
     //LineRenderer line;
@@ -69,7 +71,22 @@ public class SetTrailsZone : MonoBehaviour
             sc.rad = rad;
             sc.dim = dim;
             sc.pref = smellPrefab;
-            sc.Run();
+            sc.GeneratePath();
+            sc.InitSmells();
+        }else if (trailType == TrailType.sound)
+        {
+            Vector3 smellPos = transform.position;
+            GameObject sound = Instantiate(setSoundPrefab, smellPos, Quaternion.identity, transform);
+            SmellsController sc = sound.GetComponent<SmellsController>();
+            sc.name = "sound";
+            sc.start = sound.transform;
+            sc.rabbit = GameObject.FindGameObjectWithTag(tag).transform;
+            sc.corr = corr;
+            sc.rad = rad;
+            sc.dim = dim;
+            sc.pref = soundPrefab;
+            sc.GeneratePath();
+            sc.InitMouseSounds();
         }
     }
 }

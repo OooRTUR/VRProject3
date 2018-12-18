@@ -61,6 +61,7 @@ public class PlaceObjsByCurve : ScriptableObject {
 
     public void PlaceObjByGraph(GameObject obj)
     {
+        //Debug.Log(obj.name);
         place = ScriptableObject.CreateInstance<PlaceObjectToGround>();
         rotCalc = ScriptableObject.CreateInstance<RotationCalculator>();
         rotCalc.rectRad = 1.0f;
