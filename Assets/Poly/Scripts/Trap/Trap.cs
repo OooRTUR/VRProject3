@@ -11,7 +11,7 @@ public class Trap : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
         Debug.Log("ДЕБАГ САМФИН ПЛЗ");
-        if (isCharged)
+        if (isCharged && other.CompareTag("Player"))
         {
             //SetPlayerUnmovable(other);
             MakeAnimation();

@@ -1191,7 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc2357f5fc4a5841b13a6d430272ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freq: 0.94
+  freq: 2.05
   maxAngleZ: 45
   poolSize: 20
   groundMask:

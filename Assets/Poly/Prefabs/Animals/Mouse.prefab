@@ -1065,8 +1065,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a1282d148caff48b70352225f3960f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 4
-  runSpeed: 10
+  walkSpeed: 3
+  runSpeed: 7
   cond: 0
   saveZones: []
 --- !u!114 &114051428936201806

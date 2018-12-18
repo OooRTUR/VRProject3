@@ -29,21 +29,6 @@ public class OnLoadManager : MonoBehaviour {
         mainMenuMode = value;
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            FadeController.instance.Fader(1);
-            mainMenuMode = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            FadeController.instance.Fader(1);
-            mainMenuMode = true;
-        }
-    }
-
     public void ExitGame ()
     {
         Application.Quit();
