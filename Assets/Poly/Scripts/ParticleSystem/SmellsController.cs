@@ -71,16 +71,18 @@ public class SmellsController : MonoBehaviour {
         {
             smells[i].OnEnter += delegate (GameObject obj)
             {
-                if (index < smells.Length - 1)
+                if (index < smells.Length - 4)
                 {
                     index++;
-                    smells[index].gameObject.SetActive(true);
+                    smells[index+3].gameObject.SetActive(true);
                 }
             };
             smells[i].gameObject.SetActive(false);
         }
         index = 0;
         smells[index].gameObject.SetActive(true);
+        smells[index + 1].gameObject.SetActive(true);
+        smells[index + 2].gameObject.SetActive(true);
     }
     IEnumerator DrawPath()
     {
