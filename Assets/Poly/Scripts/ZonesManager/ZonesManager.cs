@@ -7,6 +7,7 @@ public class ZonesManager : MonoBehaviour {
     [SerializeField] public SetTrailsZone trailStart;
     [HideInInspector] public Transform[] saveZones;
     [SerializeField] public Transform eaglePatrolPoint;
+    public GameObject target;
 
 
     [SerializeField] public Transform wayPointsHandler;

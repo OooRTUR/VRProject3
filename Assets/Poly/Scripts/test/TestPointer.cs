@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TestPointer : MonoBehaviour {
     [SerializeField] Transform canvasCenter;
     [SerializeField] Transform player;
-    [SerializeField] Transform target3d;
+    [SerializeField] public Transform target3d;
     [SerializeField] FieldOfViewAudio fow;
     [SerializeField] Image image;
     [SerializeField] float rad;
