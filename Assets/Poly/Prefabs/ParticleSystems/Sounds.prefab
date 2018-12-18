@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4761118187350630}
   - component: {fileID: 114061005744428882}
   m_Layer: 0
-  m_Name: Smeels
+  m_Name: Sounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,10 +52,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smells: []
+  sounds: []
+  start: {fileID: 0}
   rabbit: {fileID: 0}
   index: 0
+  sIndex: 0
   rad: 12.25
   dim: 2
   rar: 0
   pref: {fileID: 1077300619003752, guid: b578894f87a9f374d9cbda0565305e0c, type: 2}
   smellsParent: {fileID: 4761118187350630}
+  corr: 0

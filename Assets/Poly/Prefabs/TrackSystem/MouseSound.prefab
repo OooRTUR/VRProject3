@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4695341499338842}
   - component: {fileID: 33607034183746868}
-  - component: {fileID: 135000282809484620}
   - component: {fileID: 23776712888643230}
   - component: {fileID: 114390301911191606}
   - component: {fileID: 82734022437258746}
+  - component: {fileID: 65660988462424610}
   m_Layer: 0
   m_Name: MouseSound
   m_TagString: Untagged
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1352608745551852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1270.8873, y: 193.17683, z: 1169.5598}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1277.5022, y: 9.122717, z: 1205.5286}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fc9322608c76b7145985aded06ad7c05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,6 +83,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1352608745551852}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65660988462424610
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1352608745551852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.9651704, y: 20.610014, z: 5.540365}
+  m_Center: {x: 0.8174636, y: -1.1483991, z: 0.34423786}
 --- !u!82 &82734022437258746
 AudioSource:
   m_ObjectHideFlags: 1
@@ -91,13 +103,13 @@ AudioSource:
   m_GameObject: {fileID: 1352608745551852}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243663191832226474, guid: 31a44f0f5a10acf41999f301af00de57,
+  OutputAudioMixerGroup: {fileID: 243553655267145698, guid: 31a44f0f5a10acf41999f301af00de57,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 73fd9b43ab5e6a34bb0cc335c98c1c32, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 97c4162f069eda54fa62ae9350b537f0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -151,7 +163,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -176,15 +188,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rabbit: {fileID: 0}
---- !u!135 &135000282809484620
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1352608745551852}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.2180176
-  m_Center: {x: -0.057678223, y: 0.18525696, z: 0}
