@@ -10,7 +10,7 @@ public class VolumeSettings : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        mixer.SetFloat("Volume", 60.0f);
+        mixer.SetFloat("Volume", 0.0f);
 	}
 
     public void SetFxLvlDown()

@@ -221,7 +221,7 @@ public class OVRPlayerController : MonoBehaviour
 			buttonRotation += RotationRatchet;
 	}
 
-	protected virtual void UpdateController()
+    protected virtual void UpdateController()
 	{
 		if (useProfileData)
 		{
@@ -511,7 +511,7 @@ public class OVRPlayerController : MonoBehaviour
 	/// </summary>
 	public void Stop()
 	{
-		Controller.Move(Vector3.zero);
+        Controller.Move(Vector3.zero);
 		MoveThrottle = Vector3.zero;
 		FallSpeed = 0.0f;
 	}

@@ -14,6 +14,7 @@ public class MouseLocationSound : MonoBehaviour {
     {
         //mat = GetComponent<Renderer>().material;
         rend = GetComponent<Renderer>();
+        //StartCoroutine();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,7 +28,9 @@ public class MouseLocationSound : MonoBehaviour {
         }
     }
 
+
     // Update is called once per frame
+    /*
     void Update () {
         float playerRot = 360.0f - Player.instance.transform.rotation.eulerAngles.y;
         float rotToTarget = Vec3Mathf.GetAngle1(Player.instance.transform.position, transform.position);
@@ -44,4 +47,5 @@ public class MouseLocationSound : MonoBehaviour {
 
         Debug.Log(playerRot + " | " + rotToTarget + " | " + deltaRot);
 	}
+    */
 }

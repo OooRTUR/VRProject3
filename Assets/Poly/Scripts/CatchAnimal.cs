@@ -10,12 +10,14 @@ public class CatchAnimal : MonoBehaviour {
 	public Image fillImage;
     public Renderer rend;
     BoxCollider col;
+    AudioSource a_source;
 
 	float catchTimer;
 
     private void Awake()
     {
         col = GetComponent<BoxCollider>();
+        a_source = GetComponent<AudioSource>();
     }
 
     public void Catch (string tag) {
@@ -27,7 +29,19 @@ public class CatchAnimal : MonoBehaviour {
             StartCoroutine("MoveCatchText");
             rend.enabled = false;
             col.enabled = false;
+            a_source.enabled = false;
 		}
+    }
+
+    public void Catch ()
+    {
+        transform.localScale = Vector3.one * 0.5f;
+        StartCoroutine("MoveCatchText");
+        rend.enabled = false;
+        col.enabled = false;
+        a_source.enabled = false;
+        GameMenu.instance.mouses++;
+        GameMenu.instance.UpdateMenu();
     }
 
     public void ResetFill()

@@ -1173,7 +1173,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 65536
-  stepPrefab: {fileID: 1852213861095304, guid: b526e321e23c291458b0221ba42f606f, type: 2}
+  stepPrefab: {fileID: 1852213861095304, guid: 5e236fed2c6875b4bb39a3d340b09f05, type: 2}
   stepPos: {fileID: 4292059060969016}
 --- !u!137 &137056081445869470
 SkinnedMeshRenderer:

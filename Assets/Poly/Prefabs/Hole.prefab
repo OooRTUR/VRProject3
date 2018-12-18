@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 33822240527531592}
   - component: {fileID: 23273110593181852}
   - component: {fileID: 65960680350846518}
-  - component: {fileID: 65923734210903720}
-  m_Layer: 0
+  - component: {fileID: 114271841525353454}
+  m_Layer: 19
   m_Name: Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,18 +135,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1703443390775112}
   m_Mesh: {fileID: 4300000, guid: 22399106c4e348b489f99b6633ad4c29, type: 3}
---- !u!65 &65923734210903720
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1703443390775112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.08, y: 1.83, z: 1.77}
-  m_Center: {x: 0.00002643466, y: 0.0021313434, z: 0.05000002}
 --- !u!65 &65960680350846518
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -155,9 +143,9 @@ BoxCollider:
   m_GameObject: {fileID: 1703443390775112}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2050998, y: 1.1984631, z: 0.7}
+  m_Size: {x: 1.2050998, y: 1.4, z: 0.7}
   m_Center: {x: 0.00002643466, y: 0.0021313434, z: 0.05000002}
 --- !u!114 &114235048440250848
 MonoBehaviour:
@@ -192,6 +180,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: +1
+--- !u!114 &114271841525353454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1703443390775112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9624c0fba99cff44384331cecc5694af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousesInHole: []
+  filler: {fileID: 114775227492732288}
 --- !u!114 &114655594297978016
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,6 +6,7 @@ public class AnimalRaycaster : MonoBehaviour {
 
     public Transform neck;
     public LayerMask animalMask;
+    public LayerMask holeMask;
     CatchAnimal animal;
 
     RaycastHit hit;
@@ -31,6 +32,11 @@ public class AnimalRaycaster : MonoBehaviour {
                 animal.ResetFill();
                 animal = null;
             }
+        }
+        if (Physics.SphereCast(ray, 2, out hit, 4, holeMask))
+        {
+            if (hit.collider.GetComponent<HoleController>())
+                hit.collider.GetComponent<HoleController>().TryTakeMouse();
         }
     }
 }

@@ -45,9 +45,11 @@ public class MouseMotor : AnimalMotor
     // состояние защиты
     protected override IEnumerator Safety()
     {
+        HoleController hc = ai.areaCenter.GetComponentInChildren<HoleController>();
         float delay = 3.5f;
         //Debug.Log("override Safety() started | this is inherited method from AnimalMotor");
         transform.localScale = Vector3.zero;
+        hc.mousesInHole.Add(gameObject);
         box.enabled = false;
         yield return new WaitForSeconds(delay);
 		while (true)
@@ -57,7 +59,8 @@ public class MouseMotor : AnimalMotor
             else
                 break;
         }
-        transform.localScale = Vector3.one;
+        transform.localScale = Vector3.one * 0.5f;
+        hc.mousesInHole.Remove(gameObject);
         box.enabled = true;
         ChangeCondition(Condition.Secure, "Safety", "Secure");
     }

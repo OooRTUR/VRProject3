@@ -1225,7 +1225,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 65536
-  stepPrefab: {fileID: 1852213861095304, guid: b526e321e23c291458b0221ba42f606f, type: 2}
+  stepPrefab: {fileID: 1852213861095304, guid: e0fb58782174fb649bc54d013a8cd609, type: 2}
   stepPos: {fileID: 4438259025163022}
 --- !u!114 &114984287174323936
 MonoBehaviour:
