@@ -1200,7 +1200,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e1d39e89c3529454dbc03725145d830f, type: 3}
   - {fileID: 8300000, guid: 6fb19e557720849479ee907a85479a61, type: 3}
   - {fileID: 8300000, guid: 9274695edab51f243a02b12f2fb9cacd, type: 3}
+  dangerClips: []
   delay: 4
+  isDanger: 0
 --- !u!114 &114457245610174448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1247,7 +1249,7 @@ MonoBehaviour:
   poolSize: 20
   groundMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 65536
   stepPrefab: {fileID: 1852213861095304, guid: b526e321e23c291458b0221ba42f606f, type: 2}
   stepPos: {fileID: 4733696108509558}
 --- !u!114 &114636054993065250

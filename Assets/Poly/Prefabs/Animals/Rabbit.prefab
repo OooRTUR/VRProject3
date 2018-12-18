@@ -162,6 +162,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1224281667279570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4042866423327956}
+  m_Layer: 11
+  m_Name: Steps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1236700768484704
 GameObject:
   m_ObjectHideFlags: 1
@@ -284,6 +299,7 @@ GameObject:
   - component: {fileID: 114759325957807062}
   - component: {fileID: 82617339364149990}
   - component: {fileID: 114538479316099684}
+  - component: {fileID: 114647088116030834}
   m_Layer: 11
   m_Name: Rabbit
   m_TagString: Rabbit
@@ -523,6 +539,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4042866423327956
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224281667279570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.051, y: -0.184, z: -0.374}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4152875122180532}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4052145258201904
 Transform:
   m_ObjectHideFlags: 1
@@ -627,7 +656,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381570292006832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1044.038, y: 25.025942, z: 804.81714}
+  m_LocalPosition: {x: 1567.8542, y: 12.173, z: 1718.9874}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 4667230773071082}
@@ -636,6 +665,7 @@ Transform:
   - {fileID: 4384819292778624}
   - {fileID: 4676914001421384}
   - {fileID: 224548907462016962}
+  - {fileID: 4042866423327956}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1206,6 +1236,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65536
   visibleTargets: []
+--- !u!114 &114647088116030834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1381570292006832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc2357f5fc4a5841b13a6d430272ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freq: 0.94
+  maxAngleZ: 45
+  poolSize: 20
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 65536
+  stepPrefab: {fileID: 1852213861095304, guid: b526e321e23c291458b0221ba42f606f, type: 2}
+  stepPos: {fileID: 4042866423327956}
 --- !u!114 &114759325957807062
 MonoBehaviour:
   m_ObjectHideFlags: 1

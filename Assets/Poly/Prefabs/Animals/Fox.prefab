@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 65684518001208236}
   - component: {fileID: 82648308218938596}
   - component: {fileID: 114727800335885250}
+  - component: {fileID: 114854770634014656}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Untagged
@@ -395,6 +396,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1802231395523768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4292059060969016}
+  m_Layer: 0
+  m_Name: Steps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1840637098072452
 GameObject:
   m_ObjectHideFlags: 1
@@ -597,6 +613,19 @@ Transform:
   m_Father: {fileID: 4624895978825464}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4292059060969016
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1802231395523768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.48, y: 0, z: -6.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4536721096455810}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4321882006280698
 Transform:
   m_ObjectHideFlags: 1
@@ -735,10 +764,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1271660664419378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 383.9825, y: 10.010377, z: 735.0703}
+  m_LocalPosition: {x: 1564.6897, y: 11.537669, z: 1721.2117}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 4485307722810902}
+  - {fileID: 4292059060969016}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1126,6 +1156,25 @@ MonoBehaviour:
   dangerClips: []
   delay: 4
   isDanger: 0
+--- !u!114 &114854770634014656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1271660664419378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc2357f5fc4a5841b13a6d430272ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freq: 0.94
+  maxAngleZ: 45
+  poolSize: 20
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 65536
+  stepPrefab: {fileID: 1852213861095304, guid: b526e321e23c291458b0221ba42f606f, type: 2}
+  stepPos: {fileID: 4292059060969016}
 --- !u!137 &137056081445869470
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

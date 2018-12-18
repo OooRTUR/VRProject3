@@ -379,6 +379,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1863949240141942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4438259025163022}
+  m_Layer: 11
+  m_Name: Steps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1867950103746746
 GameObject:
   m_ObjectHideFlags: 1
@@ -486,6 +501,7 @@ GameObject:
   - component: {fileID: 114659837720899752}
   - component: {fileID: 82049877568870806}
   - component: {fileID: 114109462233367990}
+  - component: {fileID: 114941706041055672}
   m_Layer: 11
   m_Name: Mouse
   m_TagString: Mouse
@@ -716,6 +732,19 @@ Transform:
   m_Father: {fileID: 4268728243470012}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4438259025163022
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1863949240141942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.01, y: 0, z: -0.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4862208794553222}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4457620076018352
 Transform:
   m_ObjectHideFlags: 1
@@ -833,7 +862,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1967477372359660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 416.87344, y: 10.010377, z: 779.3178}
+  m_LocalPosition: {x: 437.9892, y: 10.010378, z: 685.25214}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4869091483960400}
@@ -841,6 +870,7 @@ Transform:
   - {fileID: 4350790834773510}
   - {fileID: 4304156835074846}
   - {fileID: 224410240423371714}
+  - {fileID: 4438259025163022}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1178,6 +1208,25 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114941706041055672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967477372359660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc2357f5fc4a5841b13a6d430272ca5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freq: 0.94
+  maxAngleZ: 45
+  poolSize: 20
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 65536
+  stepPrefab: {fileID: 1852213861095304, guid: b526e321e23c291458b0221ba42f606f, type: 2}
+  stepPos: {fileID: 4438259025163022}
 --- !u!114 &114984287174323936
 MonoBehaviour:
   m_ObjectHideFlags: 1
