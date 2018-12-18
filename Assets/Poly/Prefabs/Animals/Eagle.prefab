@@ -1080,7 +1080,7 @@ MonoBehaviour:
   saveZones: []
   attackTarget: {fileID: 0}
   remDist: 13.9
-  rad: 50.2
+  rad: 141.13
   anglePlus: 67.8
   eagleWaitPoint: {fileID: 0}
   currentCond: 

@@ -7,7 +7,15 @@ using Random = UnityEngine.Random;
 public class MouseMotor : AnimalMotor
 {
 
-	protected override void Update ()
+    BoxCollider box;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        box = GetComponent<BoxCollider>();
+    }
+
+    protected override void Update ()
 	{
 		animator.SetFloat("Speed", agent.velocity.magnitude);
 	}
@@ -39,7 +47,8 @@ public class MouseMotor : AnimalMotor
     {
         float delay = 3.5f;
         //Debug.Log("override Safety() started | this is inherited method from AnimalMotor");
-        transform.localScale = Vector3.one * 0.2f;
+        transform.localScale = Vector3.zero;
+        box.enabled = false;
         yield return new WaitForSeconds(delay);
 		while (true)
         {
@@ -49,6 +58,7 @@ public class MouseMotor : AnimalMotor
                 break;
         }
         transform.localScale = Vector3.one;
+        box.enabled = true;
         ChangeCondition(Condition.Secure, "Safety", "Secure");
     }
 }

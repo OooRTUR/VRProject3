@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class OnLoadManager : MonoBehaviour {
 
     public static OnLoadManager instance;
-    [HideInInspector]public Material currentWeather;
+    [HideInInspector]public int currentWeather = -1;
     [HideInInspector]public Material currentFox;
     [SerializeField] public bool mainMenuMode = true;
 
@@ -42,6 +42,11 @@ public class OnLoadManager : MonoBehaviour {
             FadeController.instance.Fader(1);
             mainMenuMode = true;
         }
+    }
+
+    public void ExitGame ()
+    {
+        Application.Quit();
     }
 
 

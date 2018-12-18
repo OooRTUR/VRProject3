@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class DayTimeController : MonoBehaviour {
 
+    [SerializeField] Light sun;
     [SerializeField] Material[] daytimes;
     [SerializeField] Toggle[] dayTimeButtons;
 
     void Start () {
-        if (OnLoadManager.instance.currentWeather != null)
-            RenderSettings.skybox = OnLoadManager.instance.currentWeather;
+        if (OnLoadManager.instance.currentWeather >= 0)
+            SetWeather(OnLoadManager.instance.currentWeather);
         else
-            RenderSettings.skybox = daytimes[0];
+            SetWeather(0);
 
         if(dayTimeButtons!=null)
         for (int i = 0; i < daytimes.Length; i++)
@@ -21,7 +22,7 @@ public class DayTimeController : MonoBehaviour {
                 dayTimeButtons[i].isOn = true;
         }
     }
-	
+
     /*void OnGUI()
     {
         if (GUI.Button(new Rect(10, 10, 150, 100), "morning"))
@@ -47,12 +48,22 @@ public class DayTimeController : MonoBehaviour {
 
     public void SetWeather (int weatherIndex)
     {
+        switch(weatherIndex)
+        {
+            case 0:
+                sun.intensity = 0.4f;
+                break;
+            case 1:
+                sun.intensity = 0.65f;
+                break;
+            case 2:
+                sun.intensity = 0.4f;
+                break;
+            case 3:
+                sun.intensity = 0;
+                break;
+        }
         RenderSettings.skybox = daytimes[weatherIndex];
-        OnLoadManager.instance.currentWeather = daytimes[weatherIndex];
-    }
-
-    public void Debuging ()
-    {
-        print("Touched!");
+        OnLoadManager.instance.currentWeather = weatherIndex;
     }
 }

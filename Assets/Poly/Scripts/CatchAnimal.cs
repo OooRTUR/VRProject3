@@ -70,6 +70,9 @@ public class CatchAnimal : MonoBehaviour {
             case "Chicken":
                 GameMenu.instance.chickens++;
                 break;
+            case "Hole":
+                GameMenu.instance.mouses++;
+                break;
         }
         GameMenu.instance.UpdateMenu();
     }

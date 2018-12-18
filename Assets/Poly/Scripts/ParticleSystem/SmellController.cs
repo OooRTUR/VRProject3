@@ -24,9 +24,12 @@ public class SmellController : MonoBehaviour {
             
             
         }*/
-        OnEnter(gameObject);
-        isTriggered = true;
-        pr.enabled = false;
+        if (!isTriggered)
+        {
+            OnEnter(gameObject);
+            isTriggered = true;
+            pr.enabled = false;
+        }
     }
     IEnumerator ChangeRot()
     {
